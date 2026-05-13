@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <script>if (new URLSearchParams(location.search).has("embed")) document.documentElement.classList.add("embed-mode");</script>
-    <link rel="stylesheet" href="./styles.css?v=16" />
+    <link rel="stylesheet" href="./styles.css?v=17" />
     <style>
       .embed-mode .task-board {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -491,7 +491,7 @@
                 <div class="raffle-card-head">
                   <span class="network-pill">Twitter / X</span>
                   <span class="task-pill locked-progress">Locked - 4/10 tasks approved</span>
-                  <span class="status-mark locked-mark" aria-label="Raffle locked">âš¡</span>
+                  <span class="status-mark locked-mark" aria-label="Raffle locked" data-tooltip="This raffle is visible but not open to you yet. Complete more approved tasks and finish the required raffle task to unlock participation." tabindex="0">&#9889;</span>
                 </div>
 
                 <div class="raffle-title-row">
@@ -533,7 +533,7 @@
                 <div class="raffle-card-head">
                   <span class="network-pill">Twitter / X</span>
                   <span class="task-pill entered-pill" id="readyRafflePill">Ready - 10/10 tasks approved</span>
-                  <span class="status-mark entered-mark" id="readyRaffleMark" aria-label="Ready to enter">&#10003;</span>
+                  <span class="status-mark entered-mark" id="readyRaffleMark" aria-label="Ready to enter" data-tooltip="You’ve met the requirements. Join before the raffle closes to secure your entry." tabindex="0">&#10003;</span>
                 </div>
 
                 <div class="raffle-title-row">
