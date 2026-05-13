@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <script>if (new URLSearchParams(location.search).has("embed")) document.documentElement.classList.add("embed-mode");</script>
-    <link rel="stylesheet" href="./styles.css?v=21" />
+    <link rel="stylesheet" href="./styles.css?v=22" />
     <style>
       .embed-mode .task-board {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -646,38 +646,6 @@
           </div>
         </div>
 
-        <div class="modal-body-grid">
-          <article class="detail-card timeline-card">
-            <div class="detail-card-head">
-              <span>Timeline</span>
-              <strong>Draw window</strong>
-            </div>
-            <div class="timeline-row">
-              <div>
-                <span>Starts</span>
-                <strong>May 10, 2026, 03:47 PM</strong>
-              </div>
-              <div>
-                <span>Ends</span>
-                <strong>May 10, 2026, 07:47 PM</strong>
-              </div>
-            </div>
-            <div class="mini-progress">
-              <span style="width: 68%"></span>
-            </div>
-          </article>
-
-          <article class="detail-card status-card">
-            <div class="detail-card-head">
-              <span>Required task status</span>
-              <strong id="detailsStatus">Not completed yet</strong>
-            </div>
-            <p id="detailsStatusCopy">
-              Your entry is locked until the raffle task is confirmed and enough normal tasks are approved.
-            </p>
-          </article>
-        </div>
-
         <article class="task-detail-panel">
           <div>
             <p class="eyebrow">Required raffle task</p>
@@ -695,6 +663,10 @@
             </button>
           </div>
         <div class="merged-proof-form">
+          <div class="proof-form-head">
+            <span>Proof submission</span>
+            <strong>Submit your raffle task proof</strong>
+          </div>
           <div class="proof-grid details-proof-grid">
             <label class="proof-field">
               <span>Text proof <small>optional</small></span>
@@ -794,7 +766,8 @@
       };
 
       const setText = (id, value) => {
-        document.querySelector(id).textContent = value;
+        const element = document.querySelector(id);
+        if (element) element.textContent = value;
       };
 
       const openDetails = (type, trigger) => {
