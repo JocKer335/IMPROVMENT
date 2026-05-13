@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <script>if (new URLSearchParams(location.search).has("embed")) document.documentElement.classList.add("embed-mode");</script>
-    <link rel="stylesheet" href="./styles.css?v=18" />
+    <link rel="stylesheet" href="./styles.css?v=21" />
     <style>
       .embed-mode .task-board {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -268,7 +268,7 @@
                   <strong>+20 Owl Fragment</strong>
                 </div>
                 <span class="boost-chip">x2 active</span>
-                <button class="task-start-button" type="button" data-open-proof>Start</button>
+                <button class="task-start-button" type="button" data-open-details="locked">Start</button>
               </div>
             </article>
 
@@ -687,68 +687,34 @@
             </p>
           </div>
           <div class="modal-actions">
-            <button class="primary-modal-action" type="button" id="detailsPrimaryAction" data-open-proof>
+            <button class="primary-modal-action" type="button" id="detailsPrimaryAction">
               Complete Task
             </button>
             <button class="secondary-modal-action" type="button">
               Task Link
             </button>
           </div>
+        <div class="merged-proof-form">
+          <div class="proof-grid details-proof-grid">
+            <label class="proof-field">
+              <span>Text proof <small>optional</small></span>
+              <textarea placeholder="Paste your link, handle, transaction note, or anything that helps verify the raffle task."></textarea>
+            </label>
+
+            <label class="upload-field">
+              <input type="file" />
+              <span class="upload-icon">+</span>
+              <strong>Upload screenshot</strong>
+              <small>Click to upload image proof.</small>
+            </label>
+          </div>
+        </div>
         </article>
-      </section>
-    </div>
-
-    <div class="proof-overlay" id="proofOverlay" aria-hidden="true">
-      <section class="proof-modal" role="dialog" aria-modal="true" aria-labelledby="proofTitle">
-        <button class="modal-close" type="button" aria-label="Close proof form" data-close-proof>x</button>
-
-        <div class="proof-header">
-          <p class="eyebrow">Task Verification</p>
-          <h2 id="proofTitle">Like + Retweet</h2>
-          <p>
-            Add a note, link, or screenshot so the team can approve this task.
-          </p>
-        </div>
-
-        <div class="proof-task-card">
-          <div class="proof-status-icon" aria-label="Twitter / X">X</div>
-          <div>
-            <span>Raffle task</span>
-            <strong>Like + Retweet</strong>
-            <p>Open the post, complete the action, then submit proof for review.</p>
-          </div>
-          <div class="proof-task-actions">
-            <span class="proof-reward">+20 Owl Fragment</span>
-            <a href="#" class="proof-link">Open Link</a>
-          </div>
-        </div>
-
-        <div class="proof-grid">
-          <label class="proof-field">
-            <span>Text proof <small>optional</small></span>
-            <textarea placeholder="Paste your link, handle, transaction note, or anything that helps verify the task."></textarea>
-          </label>
-
-          <label class="upload-field">
-            <input type="file" />
-            <span class="upload-icon">+</span>
-            <strong>Upload screenshot</strong>
-            <small>Click to upload image proof.</small>
-          </label>
-        </div>
-
-        <div class="proof-footer">
-          <button class="secondary-modal-action" type="button" data-close-proof>Cancel</button>
-          <button class="primary-modal-action proof-submit" type="button">
-            Submit Verification
-          </button>
-        </div>
       </section>
     </div>
 
     <script>
       const overlay = document.querySelector("#detailsOverlay");
-      const proofOverlay = document.querySelector("#proofOverlay");
       const fontButtons = document.querySelectorAll("[data-font-choice]");
       const activeFontLabel = document.querySelector("#activeFontLabel");
       const setProjectFont = (fontName) => {
@@ -792,7 +758,7 @@
           statusCopy: "Your entry is locked until the raffle task is confirmed and your approved normal task count reaches the threshold.",
           taskTitle: "Share the official Owl Pack post",
           taskBody: "Open the task link, complete the Twitter / X action, then return here and confirm the task.",
-          action: "Complete Task",
+          action: "Submit Verification",
           entered: false,
         },
         ready: {
@@ -876,40 +842,13 @@
           document.querySelector("#completedTasks").classList.toggle("is-active", tab === "completed");
         });
       });
-
-      document.querySelector("[data-close-details]").addEventListener("click", () => {
-        overlay.classList.remove("is-open");
-        overlay.setAttribute("aria-hidden", "true");
-      });
-
-      document.querySelectorAll("[data-open-proof]").forEach((button) => {
-        button.addEventListener("click", (event) => {
-          placeOverlayNearTrigger(proofOverlay, event.currentTarget);
-          proofOverlay.classList.add("is-open");
-          proofOverlay.setAttribute("aria-hidden", "false");
-        });
-      });
-
-      document.querySelectorAll("[data-close-proof]").forEach((button) => {
+      document.querySelectorAll("[data-close-details]").forEach((button) => {
         button.addEventListener("click", () => {
-          proofOverlay.classList.remove("is-open");
-          proofOverlay.setAttribute("aria-hidden", "true");
-        });
-      });
-
-      overlay.addEventListener("click", (event) => {
-        if (event.target === overlay) {
           overlay.classList.remove("is-open");
           overlay.setAttribute("aria-hidden", "true");
-        }
+        });
       });
 
-      proofOverlay.addEventListener("click", (event) => {
-        if (event.target === proofOverlay) {
-          proofOverlay.classList.remove("is-open");
-          proofOverlay.setAttribute("aria-hidden", "true");
-        }
-      });
     </script>
   </body>
 </html>
