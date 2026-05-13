@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNF Font Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Audiowide&family=Barlow+Condensed:wght@600;700;800&family=Bungee&family=Chakra+Petch:wght@600;700&family=Exo+2:wght@600;700;800&family=Inter+Tight:wght@600;700;800&family=Kanit:wght@600;700;800&family=Michroma&family=Orbitron:wght@600;700;800&family=Oxanium:wght@600;700;800&family=Quantico:wght@700&family=Rajdhani:wght@600;700&family=Russo+One&family=Share+Tech+Mono&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@600;700&family=Syncopate:wght@700&family=Tektur:wght@600;700;800&family=Titillium+Web:wght@600;700;900&family=Tomorrow:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #f7fbff;
+        --muted: #b9d7ea;
+        --line: rgba(255, 255, 255, 0.2);
+        --yellow: #ffd21a;
+        --green: #35df9e;
+        --blue: #38aaf2;
+        --deep: #082f52;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 18% 10%, rgba(99, 217, 255, 0.52), transparent 28%),
+          linear-gradient(145deg, #3fb4e8 0%, #17699e 42%, #082f52 100%);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(120deg, rgba(255, 255, 255, 0.12), transparent 34%),
+          repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 4px);
+      }
+
+      main {
+        position: relative;
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 54px;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: Oxanium, Rajdhani, system-ui, sans-serif;
+        font-size: clamp(32px, 5vw, 58px);
+        line-height: 1;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        min-height: 42px;
+        padding: 10px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        border-radius: 999px;
+        color: var(--ink);
+        background: rgba(4, 42, 72, 0.48);
+        font: 700 15px Rajdhani, system-ui, sans-serif;
+        text-decoration: none;
+      }
+
+      .font-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(230px, 1fr));
+        gap: 18px;
+      }
+
+      .font-card {
+        min-height: 285px;
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background:
+          radial-gradient(circle at 18% 8%, rgba(255, 210, 26, 0.18), transparent 24%),
+          linear-gradient(155deg, rgba(88, 190, 250, 0.78), rgba(14, 94, 150, 0.76));
+        box-shadow:
+          0 24px 60px rgba(3, 22, 42, 0.24),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      }
+
+      .font-card strong {
+        display: block;
+        color: var(--yellow);
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      .sample-title {
+        margin: 20px 0 8px;
+        font-size: 34px;
+        line-height: 1;
+      }
+
+      .sample-task {
+        margin: 0;
+        color: #d8eeff;
+        font-size: 17px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .sample-reward {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: center;
+        margin-top: 28px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .sample-reward span {
+        color: #d8eeff;
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .sample-reward b {
+        display: block;
+        margin-top: 5px;
+        font-size: 20px;
+      }
+
+      .sample-button {
+        min-height: 42px;
+        border: 1px solid rgba(255, 210, 26, 0.74);
+        border-radius: 999px;
+        padding: 10px 17px;
+        color: #ffffff;
+        background: rgba(255, 210, 26, 0.18);
+        font: inherit;
+        font-weight: 800;
+      }
+
+      .oxanium {
+        font-family: Oxanium, Rajdhani, system-ui, sans-serif;
+      }
+
+      .rajdhani {
+        font-family: Rajdhani, system-ui, sans-serif;
+      }
+
+      .orbitron {
+        font-family: Orbitron, system-ui, sans-serif;
+      }
+
+      .exo {
+        font-family: "Exo 2", system-ui, sans-serif;
+      }
+
+      .chakra {
+        font-family: "Chakra Petch", system-ui, sans-serif;
+      }
+
+      .space {
+        font-family: "Space Grotesk", system-ui, sans-serif;
+      }
+
+      .sora {
+        font-family: Sora, system-ui, sans-serif;
+      }
+
+      .barlow {
+        font-family: "Barlow Condensed", system-ui, sans-serif;
+      }
+
+      .tektur {
+        font-family: Tektur, system-ui, sans-serif;
+      }
+
+      .audiowide {
+        font-family: Audiowide, system-ui, sans-serif;
+      }
+
+      .quantico {
+        font-family: Quantico, system-ui, sans-serif;
+      }
+
+      .share-tech {
+        font-family: "Share Tech Mono", monospace;
+      }
+
+      .michroma {
+        font-family: Michroma, system-ui, sans-serif;
+      }
+
+      .tomorrow {
+        font-family: Tomorrow, system-ui, sans-serif;
+      }
+
+      .kanit {
+        font-family: Kanit, system-ui, sans-serif;
+      }
+
+      .titillium {
+        font-family: "Titillium Web", system-ui, sans-serif;
+      }
+
+      .bungee {
+        font-family: Bungee, system-ui, sans-serif;
+      }
+
+      .syncopate {
+        font-family: Syncopate, system-ui, sans-serif;
+      }
+
+      .russo {
+        font-family: "Russo One", system-ui, sans-serif;
+      }
+
+      .aldrich {
+        font-family: Aldrich, system-ui, sans-serif;
+      }
+
+      .inter-tight {
+        font-family: "Inter Tight", system-ui, sans-serif;
+      }
+
+      @media (max-width: 900px) {
+        .font-grid {
+          grid-template-columns: repeat(2, minmax(230px, 1fr));
+        }
+      }
+
+      @media (max-width: 620px) {
+        main {
+          width: min(100% - 20px, 1180px);
+          padding-top: 18px;
+        }
+
+        .top {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .font-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <h1>Font Preview</h1>
+        <a class="back-link" href="./index.html">Back to Social Tasks</a>
+      </div>
+
+      <section class="font-grid" aria-label="Font examples">
+        <article class="font-card oxanium">
+          <strong>Oxanium</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card rajdhani">
+          <strong>Rajdhani</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card orbitron">
+          <strong>Orbitron</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card exo">
+          <strong>Exo 2</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card chakra">
+          <strong>Chakra Petch</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card space">
+          <strong>Space Grotesk</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card sora">
+          <strong>Sora</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card barlow">
+          <strong>Barlow Condensed</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card tektur">
+          <strong>Tektur</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card audiowide">
+          <strong>Audiowide</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card quantico">
+          <strong>Quantico</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card share-tech">
+          <strong>Share Tech Mono</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card michroma">
+          <strong>Michroma</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card tomorrow">
+          <strong>Tomorrow</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card kanit">
+          <strong>Kanit</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card titillium">
+          <strong>Titillium Web</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card bungee">
+          <strong>Bungee</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card syncopate">
+          <strong>Syncopate</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card russo">
+          <strong>Russo One</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card aldrich">
+          <strong>Aldrich</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+
+        <article class="font-card inter-tight">
+          <strong>Inter Tight</strong>
+          <h2 class="sample-title">Like + Retweet</h2>
+          <p class="sample-task">Twitter / X task</p>
+          <div class="sample-reward"><div><span>Reward</span><b>+20 Owl Fragment</b></div><button class="sample-button">Claim</button></div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

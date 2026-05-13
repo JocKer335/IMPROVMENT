@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNF Social Tasks - Professional Mockup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Audiowide&family=Barlow+Condensed:wght@600;700;800&family=Bungee&family=Chakra+Petch:wght@600;700&family=Electrolize&family=Exo+2:wght@600;700;800&family=Geo&family=Iceland&family=Iceberg&family=Inter+Tight:wght@600;700;800&family=Jost:wght@600;700;800&family=Kanit:wght@600;700;800&family=League+Spartan:wght@600;700;800&family=Lexend:wght@600;700;800&family=Maven+Pro:wght@600;700;800&family=Michroma&family=Noto+Sans+Display:wght@600;700;800&family=Orbitron:wght@600;700;800&family=Oswald:wght@600;700&family=Oxanium:wght@500;600;700;800&family=Overpass+Mono:wght@600;700&family=Pixelify+Sans:wght@600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Quantico:wght@700&family=Rajdhani:wght@500;600;700&family=Rationale&family=Rubik+Mono+One&family=Russo+One&family=Share+Tech+Mono&family=Sora:wght@600;700;800&family=Space+Grotesk:wght@600;700&family=Syncopate:wght@700&family=Tektur:wght@600;700;800&family=Titillium+Web:wght@600;700;900&family=Tomorrow:wght@600;700;800&family=Turret+Road:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>if (new URLSearchParams(location.search).has("embed")) document.documentElement.classList.add("embed-mode");</script>
+    <link rel="stylesheet" href="./styles.css?v=9" />
+    <style>
+      .embed-mode .task-board,
+      .embed-mode .raffle-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .embed-mode .task-card-bottom,
+      .embed-mode .unlock-path {
+        grid-template-columns: 1fr !important;
+        align-items: start !important;
+      }
+
+      .embed-mode .task-start-button,
+      .embed-mode .pending-button,
+      .embed-mode .claim-button {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        justify-self: start !important;
+        width: max-content !important;
+        max-width: 100% !important;
+        margin-top: 8px !important;
+      }
+
+      .embed-mode .raffle-actions {
+        width: 100% !important;
+        justify-content: flex-start !important;
+      }
+
+      .embed-mode .unlock-path .secondary-action,
+      .embed-mode .participate-action {
+        margin-top: 8px !important;
+        white-space: normal !important;
+      }
+
+      @media (max-width: 760px) {
+        .embed-mode .task-board,
+        .embed-mode .raffle-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar" aria-label="Main navigation">
+        <a class="brand" href="../index.html#socials">
+          <span class="brand-mark">GNF</span>
+          <span>
+            <strong>Government Not Found</strong>
+            <small>Socials Hub</small>
+          </span>
+        </a>
+
+        <nav class="nav-pills" aria-label="Platform sections">
+          <a href="../index.html#fire-wall">Fire Wall</a>
+          <a href="../index.html#sacrifice">Sacrifice</a>
+          <a href="../index.html#store">Store</a>
+          <a class="active" href="../index.html#socials">Social Tasks</a>
+          <a href="../index.html#referrals">Referrals</a>
+        </nav>
+
+        <div class="wallet-card">
+          <span class="wallet-label">GNF Balance</span>
+          <div class="wallet-row">
+            <strong>10,901,100 BURNS</strong>
+            <strong>40,139 FRAGS</strong>
+            <span class="boost">2x</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="font-switcher is-hidden" aria-label="Font picker">
+        <div class="font-switcher-head">
+          <span>Title Font Test</span>
+          <strong id="activeFontLabel">Share Tech Mono</strong>
+          <small>Info font: Chakra Petch</small>
+        </div>
+        <div class="font-choice-list">
+          <button class="active" type="button" data-font-choice="Share Tech Mono">Share Tech Mono</button>
+          <button type="button" data-font-choice="Oxanium">Oxanium</button>
+          <button type="button" data-font-choice="Rajdhani">Rajdhani</button>
+          <button type="button" data-font-choice="Orbitron">Orbitron</button>
+          <button type="button" data-font-choice="Exo 2">Exo 2</button>
+          <button type="button" data-font-choice="Chakra Petch">Chakra Petch</button>
+          <button type="button" data-font-choice="Space Grotesk">Space Grotesk</button>
+          <button type="button" data-font-choice="Sora">Sora</button>
+          <button type="button" data-font-choice="Barlow Condensed">Barlow Condensed</button>
+          <button type="button" data-font-choice="Tektur">Tektur</button>
+          <button type="button" data-font-choice="Audiowide">Audiowide</button>
+          <button type="button" data-font-choice="Quantico">Quantico</button>
+          <button type="button" data-font-choice="Michroma">Michroma</button>
+          <button type="button" data-font-choice="Tomorrow">Tomorrow</button>
+          <button type="button" data-font-choice="Kanit">Kanit</button>
+          <button type="button" data-font-choice="Titillium Web">Titillium Web</button>
+          <button type="button" data-font-choice="Bungee">Bungee</button>
+          <button type="button" data-font-choice="Syncopate">Syncopate</button>
+          <button type="button" data-font-choice="Russo One">Russo One</button>
+          <button type="button" data-font-choice="Aldrich">Aldrich</button>
+          <button type="button" data-font-choice="Inter Tight">Inter Tight</button>
+          <button type="button" data-font-choice="Electrolize">Electrolize</button>
+          <button type="button" data-font-choice="Geo">Geo</button>
+          <button type="button" data-font-choice="Iceland">Iceland</button>
+          <button type="button" data-font-choice="Iceberg">Iceberg</button>
+          <button type="button" data-font-choice="Jost">Jost</button>
+          <button type="button" data-font-choice="League Spartan">League Spartan</button>
+          <button type="button" data-font-choice="Lexend">Lexend</button>
+          <button type="button" data-font-choice="Maven Pro">Maven Pro</button>
+          <button type="button" data-font-choice="Noto Sans Display">Noto Sans Display</button>
+          <button type="button" data-font-choice="Oswald">Oswald</button>
+          <button type="button" data-font-choice="Overpass Mono">Overpass Mono</button>
+          <button type="button" data-font-choice="Pixelify Sans">Pixelify Sans</button>
+          <button type="button" data-font-choice="Plus Jakarta Sans">Plus Jakarta Sans</button>
+          <button type="button" data-font-choice="Rationale">Rationale</button>
+          <button type="button" data-font-choice="Rubik Mono One">Rubik Mono One</button>
+          <button type="button" data-font-choice="Turret Road">Turret Road</button>
+        </div>
+      </section>
+
+      <div class="task-toolbar task-toolbar-top" aria-label="Task controls">
+        <div class="segmented-control" aria-label="Task filters">
+          <button class="active" type="button" data-task-tab="available">Available</button>
+          <button type="button" data-task-tab="completed">Completed</button>
+        </div>
+      </div>
+
+      <main>
+        <section class="panel task-panel" aria-labelledby="tasks-title">
+          <div class="section-head">
+            <div class="center-title">
+              <h2 id="tasks-title">Tasks</h2>
+            </div>
+          </div>
+
+          <div class="description-panel">
+
+            <strong>Tasks are the daily action board of GNF.</strong>
+            <p>Like, comment, retweet, join, or complete platform missions, then submit proof for review. Once approved, claim your reward and keep building your fragment, Burn, or pack balance.</p>
+          </div>
+
+          <div class="task-lifecycle">
+            <div>
+              <span>01</span>
+              <strong>Start</strong>
+              <small>Open the social task.</small>
+            </div>
+            <div>
+              <span>02</span>
+              <strong>Submit Proof</strong>
+              <small>Add link, note, or screenshot.</small>
+            </div>
+            <div>
+              <span>03</span>
+              <strong>Pending</strong>
+              <small>Admin review is in progress.</small>
+            </div>
+            <div>
+              <span>04</span>
+              <strong>Claim</strong>
+              <small>Approved rewards become claimable.</small>
+            </div>
+          </div>
+
+          <div class="task-actions-row">
+            <button class="refresh-button title-refresh" type="button" aria-label="Refresh tasks">
+              <span aria-hidden="true">&olarr;</span>
+              Refresh
+            </button>
+          </div>
+
+          <div class="task-board task-tab-panel is-active" id="availableTasks" aria-label="Available tasks">
+            <article class="social-task-card approved-task">
+              <div class="task-card-top">
+                <span class="task-platform" aria-label="Twitter / X">X</span>
+                <span class="task-state claim-state">Unclaimed</span>
+              </div>
+              <div class="task-card-main">
+                <p>Twitter / X</p>
+                <h3>Like + Retweet</h3>
+              </div>
+              <div class="task-card-bottom">
+                <div>
+                  <span>Reward</span>
+                  <strong>+20 Owl Fragment</strong>
+                </div>
+                <span class="boost-chip">x2 active</span>
+                <button class="task-start-button claim-button" type="button">Claim</button>
+              </div>
+            </article>
+
+            <article class="social-task-card approved-task">
+              <div class="task-card-top">
+                <span class="task-platform" aria-label="Twitter / X">X</span>
+                <span class="task-state claim-state">Unclaimed</span>
+              </div>
+              <div class="task-card-main">
+                <p>Twitter / X</p>
+                <h3>Add</h3>
+              </div>
+              <div class="task-card-bottom">
+                <div>
+                  <span>Reward</span>
+                  <strong>+30 Snake Fragment</strong>
+                </div>
+                <span class="boost-chip">x2 active</span>
+                <button class="task-start-button claim-button" type="button">Claim</button>
+              </div>
+            </article>
+
+            <article class="social-task-card approved-task">
+              <div class="task-card-top">
+                <span class="task-platform" aria-label="Twitter / X">X</span>
+                <span class="task-state claim-state">Unclaimed</span>
+              </div>
+              <div class="task-card-main">
+                <p>Twitter / X</p>
+                <h3>Comment</h3>
+              </div>
+              <div class="task-card-bottom">
+                <div>
+                  <span>Reward</span>
+                  <strong>+1 Epic Pack</strong>
+                  <span class="epic-pack-preview" aria-label="Epic Pack preview">
+                    <img src="./assets/epic-pack.png" alt="GNF Break Through First Edition pack" />
+                  </span>
+                </div>
+                <button class="task-start-button claim-button" type="button">Claim</button>
+              </div>
+            </article>
+
+            <article class="social-task-card">
+              <div class="task-card-top">
+                <span class="task-platform" aria-label="Twitter / X">X</span>
+                <span class="task-state">Not Started</span>
+              </div>
+              <div class="task-card-main">
+                <p>Twitter / X</p>
+                <h3>Like + Retweet</h3>
+              </div>
+              <div class="task-card-bottom">
+                <div>
+                  <span>Reward</span>
+                  <strong>+20 Owl Fragment</strong>
+                </div>
+                <span class="boost-chip">x2 active</span>
+                <button class="task-start-button" type="button" data-open-proof>Start</button>
+              </div>
+            </article>
+
+            <article class="social-task-card snake-task pending-task">
+              <div class="task-card-top">
+                <span class="task-platform" aria-label="Twitter / X">X</span>
+                <span class="task-state pending-state">Pending</span>
+              </div>
+              <div class="task-card-main">
+                <p>Twitter / X</p>
+                <h3>Add</h3>
+              </div>
+              <div class="task-card-bottom">
+                <div>
+                  <span>Reward</span>
+                  <strong>+30 Snake Fragment</strong>
+                </div>
+                <span class="boost-chip">x2 active</span>
+                <button class="task-start-button pending-button" type="button">Review</button>
+              </div>
+            </article>
+
+            <article class="social-task-card epic-task claim-task">
+              <div class="task-card-top">
+                <span class="task-platform" aria-label="Twitter / X">X</span>
+                <span class="task-state claim-state">Claim</span>
+              </div>
+              <div class="task-card-main">
+                <p>Twitter / X</p>
+                <h3>Comment</h3>
+              </div>
+              <div class="task-card-bottom">
+                <div>
+                  <span>Reward</span>
+                  <strong>+1 Epic Pack</strong>
+                  <span class="epic-pack-preview" aria-label="Epic Pack preview">
+                    <img src="./assets/epic-pack.png" alt="GNF Break Through First Edition pack" />
+                  </span>
+                </div>
+                <button class="task-start-button claim-button" type="button">Claim</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="completed-showcase task-tab-panel" id="completedTasks" aria-label="Completed tasks">
+            <div class="completed-task-grid">
+              <article class="completed-task-card snake-completed">
+                <div class="completed-card-top">
+                  <span class="task-platform" aria-label="Twitter / X">X</span>
+                  <span class="task-state completed-state">Completed</span>
+                </div>
+                <div class="completed-card-main">
+                  <p>Twitter / X</p>
+                  <h3>Like</h3>
+                </div>
+                <div class="completed-card-reward">
+                  <span>Reward claimed</span>
+                  <strong>+10 Snake Fragment</strong>
+                  <small>x2 active</small>
+                </div>
+              </article>
+
+              <article class="completed-task-card burn-completed">
+                <div class="completed-card-top">
+                  <span class="task-platform" aria-label="Twitter / X">X</span>
+                  <span class="task-state completed-state">Completed</span>
+                </div>
+                <div class="completed-card-main">
+                  <p>Twitter / X</p>
+                  <h3>Comment</h3>
+                </div>
+                <div class="completed-card-reward">
+                  <span>Reward claimed</span>
+                  <strong>+1000 Burn Coins</strong>
+                </div>
+              </article>
+
+              <article class="completed-task-card epic-completed">
+                <div class="completed-card-top">
+                  <span class="task-platform" aria-label="Twitter / X">X</span>
+                  <span class="task-state completed-state">Completed</span>
+                </div>
+                <div class="completed-card-main">
+                  <p>Twitter / X</p>
+                  <h3>Retweet</h3>
+                </div>
+                <div class="completed-card-reward">
+                  <span>Reward claimed</span>
+                  <strong>+1 Epic Pack</strong>
+                </div>
+              </article>
+
+              <article class="completed-task-card owl-completed">
+                <div class="completed-card-top">
+                  <span class="task-platform" aria-label="Twitter / X">X</span>
+                  <span class="task-state completed-state">Completed</span>
+                </div>
+                <div class="completed-card-main">
+                  <p>Twitter / X</p>
+                  <h3>Like</h3>
+                </div>
+                <div class="completed-card-reward">
+                  <span>Reward claimed</span>
+                  <strong>+10 Owl Fragment</strong>
+                  <small>x2 active</small>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="raffles-title">
+          <div class="section-head">
+            <div class="center-title">
+              <h2 id="raffles-title">Raffle</h2>
+              <div class="notice raffle-header-notice">
+                <span>Raffles are reward gates unlocked through approved tasks. Complete the required task path, meet the approved-task threshold of 10, and enter for a chance to win fragments, Burn, packs, or NFT rewards.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="progress-card">
+            <div class="progress-top">
+              <span>Approved task threshold</span>
+              <strong>4 / 10 approved</strong>
+            </div>
+            <div class="raffle-path" aria-label="Raffle task path">
+              <div class="path-node is-complete">
+                <span class="path-index">1</span>
+                <span class="path-orb">GNF</span>
+                <strong>Twitter / X</strong>
+              </div>
+              <div class="path-node is-complete">
+                <span class="path-index">2</span>
+                <span class="path-orb">GNF</span>
+                <strong>Twitter / X</strong>
+              </div>
+              <div class="path-node is-complete">
+                <span class="path-index">3</span>
+                <span class="path-orb">GNF</span>
+                <strong>Twitter / X</strong>
+              </div>
+              <div class="path-node is-complete">
+                <span class="path-index">4</span>
+                <span class="path-orb">GNF</span>
+                <strong>Twitter / X</strong>
+              </div>
+              <div class="path-node">
+                <span class="path-index">5</span>
+                <span class="path-orb">GNF</span>
+                <strong>Twitter / X</strong>
+              </div>
+              <div class="path-node">
+                <span class="path-index">6</span>
+                <span class="path-orb">GNF</span>
+                <strong>Twitter / X</strong>
+              </div>
+              <div class="path-node discord-node">
+                <span class="path-index">7</span>
+                <span class="path-orb">DC</span>
+                <strong>Discord</strong>
+              </div>
+              <div class="path-node raffle-node">
+                <span class="path-index">Raffle</span>
+                <span class="path-orb">&#127942;</span>
+                <strong>Raffle</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="rewards-box">
+            <div class="rewards-title">
+              <span>Approved Rewards</span>
+              <strong>Claim your raffle prizes</strong>
+            </div>
+
+            <div class="reward-claim-grid">
+              <article class="reward-item">
+                <div class="reward-glow">
+                  <strong>1x Wolf Fragment</strong>
+                </div>
+                <div class="reward-claim-area">
+                  <span>Approved</span>
+                  <button type="button">Claim Reward</button>
+                </div>
+              </article>
+
+              <article class="reward-item reward-item-alt">
+                <div class="reward-glow">
+                  <strong>1x Owl Fragment</strong>
+                </div>
+                <div class="reward-claim-area">
+                  <span>Approved</span>
+                  <button type="button">Claim Reward</button>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="section-subhead">
+            <div>
+              <h3>Active Raffles</h3>
+              <p>Live raffle entries appear here. Check the eligibility path, complete the required tasks, and participate once your progress unlocks entry.</p>
+            </div>
+            <div class="section-actions compact">
+              <button class="refresh-button" type="button" aria-label="Refresh active raffles">
+                <span aria-hidden="true">↻</span>
+                Refresh Raffles
+              </button>
+            </div>
+          </div>
+
+          <div class="raffle-grid">
+            <article class="raffle-card premium-lock">
+              <div class="raffle-main">
+                <div class="raffle-nameplate">
+                  <p class="eyebrow">Active Raffle</p>
+                </div>
+
+                <div class="raffle-card-head">
+                  <span class="network-pill">Twitter / X</span>
+                  <span class="task-pill locked-progress">Locked - 4/10 tasks approved</span>
+                  <span class="status-mark locked-mark" aria-label="Raffle locked">⚡</span>
+                </div>
+
+                <div class="raffle-title-row">
+                  <div class="reward-medal" aria-label="Reward">
+                    <span>Reward</span>
+                    <strong>1 NFT Pack Owl</strong>
+                  </div>
+                </div>
+
+                <div class="raffle-meta">
+                  <div>
+                    <span>Participants</span>
+                    <strong>2 users</strong>
+                  </div>
+                  <div>
+                    <span>Time left</span>
+                    <strong>04d 00h 00m 50s</strong>
+                  </div>
+                </div>
+
+                <div class="unlock-path">
+                  <div>
+                    <span>Required task</span>
+                    <strong>Finish the Twitter / X proof and reach 10 approved tasks.</strong>
+                  </div>
+                  <button class="secondary-action" type="button" data-open-details="locked">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <article class="raffle-card premium-lock is-entered" id="readyRaffleCard">
+              <div class="raffle-main">
+                <div class="raffle-nameplate entered-nameplate">
+                  <p class="eyebrow" id="readyRaffleState">Ready to enter</p>
+                </div>
+
+                <div class="raffle-card-head">
+                  <span class="network-pill">Twitter / X</span>
+                  <span class="task-pill entered-pill" id="readyRafflePill">Ready - 10/10 tasks approved</span>
+                  <span class="status-mark entered-mark" id="readyRaffleMark" aria-label="Ready to enter">&#10003;</span>
+                </div>
+
+                <div class="raffle-title-row">
+                  <div class="reward-medal entered-reward" aria-label="Reward">
+                    <span>Reward</span>
+                    <strong>1 NFT Pack Owl</strong>
+                  </div>
+                </div>
+
+                <div class="raffle-meta">
+                  <div>
+                    <span>Participants</span>
+                    <strong id="readyRaffleParticipants">0 users</strong>
+                  </div>
+                  <div>
+                    <span>Time left</span>
+                    <strong>00d 03h 57m 48s</strong>
+                  </div>
+                </div>
+
+                <div class="unlock-path">
+                  <div>
+                    <span id="readyRaffleStatusLabel">Join now</span>
+                    <strong id="readyRaffleStatus">Task complete. Click Participate to enter this raffle.</strong>
+                  </div>
+                  <div class="raffle-actions">
+                    <button class="participate-action" type="button" id="participateRaffle">
+                      Participate
+                    </button>
+                    <button class="secondary-action" type="button" data-open-details="ready">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="history-card">
+            <div class="section-subhead">
+              <div>
+                <h3>Raffle History</h3>
+                <p>Past raffles and outcomes live here. Review completed draws, previous entries, winners, and claimed rewards.</p>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Draw</th>
+                    <th>Task</th>
+                    <th>Reward</th>
+                    <th>Winner</th>
+                    <th>Drawn At</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2026</td>
+                    <td>Social task</td>
+                    <td>1x Wolf Fragment</td>
+                    <td>jocker</td>
+                    <td>May 10, 2026, 02:52 AM</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="details-overlay" id="detailsOverlay" aria-hidden="true">
+      <section class="details-modal" role="dialog" aria-modal="true" aria-labelledby="detailsTitle">
+        <button class="modal-close" type="button" aria-label="Close details" data-close-details>x</button>
+
+        <div class="modal-hero">
+          <div>
+            <div class="modal-kicker-row">
+              <span class="network-pill">Twitter / X</span>
+              <span class="task-pill" id="detailsTaskPill">4/10 tasks approved</span>
+            </div>
+            <p class="eyebrow" id="detailsState">Locked Raffle</p>
+            <h2 id="detailsTitle">Owl Pack Draw</h2>
+            <p id="detailsCopy">
+              Complete the required social task to unlock your entry before the countdown ends.
+            </p>
+          </div>
+
+          <div class="modal-reward-card">
+            <span>Reward</span>
+            <strong>1 NFT Pack Owl</strong>
+            <small>Winner receives the pack after the draw is approved.</small>
+          </div>
+        </div>
+
+        <div class="modal-stat-grid">
+          <div>
+            <span>Countdown</span>
+            <strong id="detailsCountdown">04d 00h 00m 50s</strong>
+          </div>
+          <div>
+            <span>Participants</span>
+            <strong id="detailsParticipants">2 users</strong>
+          </div>
+          <div>
+            <span>Approved tasks</span>
+            <strong id="detailsApproved">3 / 4</strong>
+          </div>
+        </div>
+
+        <div class="modal-body-grid">
+          <article class="detail-card timeline-card">
+            <div class="detail-card-head">
+              <span>Timeline</span>
+              <strong>Draw window</strong>
+            </div>
+            <div class="timeline-row">
+              <div>
+                <span>Starts</span>
+                <strong>May 10, 2026, 03:47 PM</strong>
+              </div>
+              <div>
+                <span>Ends</span>
+                <strong>May 10, 2026, 07:47 PM</strong>
+              </div>
+            </div>
+            <div class="mini-progress">
+              <span style="width: 68%"></span>
+            </div>
+          </article>
+
+          <article class="detail-card status-card">
+            <div class="detail-card-head">
+              <span>Required task status</span>
+              <strong id="detailsStatus">Not completed yet</strong>
+            </div>
+            <p id="detailsStatusCopy">
+              Your entry is locked until the raffle task is confirmed and enough normal tasks are approved.
+            </p>
+          </article>
+        </div>
+
+        <article class="task-detail-panel">
+          <div>
+            <p class="eyebrow">Required raffle task</p>
+            <h3 id="detailsTaskTitle">Share the official Owl Pack post</h3>
+            <p id="detailsTaskBody">
+              Open the task link, complete the Twitter / X action, then return here and confirm the task.
+            </p>
+          </div>
+          <div class="modal-actions">
+            <button class="primary-modal-action" type="button" id="detailsPrimaryAction" data-open-proof>
+              Complete Task
+            </button>
+            <button class="secondary-modal-action" type="button">
+              Task Link
+            </button>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <div class="proof-overlay" id="proofOverlay" aria-hidden="true">
+      <section class="proof-modal" role="dialog" aria-modal="true" aria-labelledby="proofTitle">
+        <button class="modal-close" type="button" aria-label="Close proof form" data-close-proof>x</button>
+
+        <div class="proof-header">
+          <p class="eyebrow">Task Verification</p>
+          <h2 id="proofTitle">Like + Retweet</h2>
+          <p>
+            Add a note, link, or screenshot so the team can approve this task.
+          </p>
+        </div>
+
+        <div class="proof-task-card">
+          <div class="proof-status-icon" aria-label="Twitter / X">X</div>
+          <div>
+            <span>Twitter / X task</span>
+            <strong>Like + Retweet</strong>
+            <p>Open the post, complete the action, then submit proof for review.</p>
+          </div>
+          <div class="proof-task-actions">
+            <span class="proof-reward">+20 Owl Fragment</span>
+            <a href="#" class="proof-link">Open Link</a>
+          </div>
+        </div>
+
+        <div class="proof-grid">
+          <label class="proof-field">
+            <span>Text proof <small>optional</small></span>
+            <textarea placeholder="Paste your link, handle, transaction note, or anything that helps verify the task."></textarea>
+          </label>
+
+          <label class="upload-field">
+            <input type="file" />
+            <span class="upload-icon">+</span>
+            <strong>Upload screenshot</strong>
+            <small>Click to upload image proof.</small>
+          </label>
+        </div>
+
+        <div class="proof-footer">
+          <button class="secondary-modal-action" type="button" data-close-proof>Cancel</button>
+          <button class="primary-modal-action proof-submit" type="button">
+            Submit Verification
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      const overlay = document.querySelector("#detailsOverlay");
+      const proofOverlay = document.querySelector("#proofOverlay");
+      const fontButtons = document.querySelectorAll("[data-font-choice]");
+      const activeFontLabel = document.querySelector("#activeFontLabel");
+      const setProjectFont = (fontName) => {
+        const fontStack = `"${fontName}", Rajdhani, system-ui, sans-serif`;
+        document.documentElement.style.setProperty("--font-display", fontStack);
+        document.documentElement.style.setProperty(
+          "--font-ui",
+          '"Chakra Petch", Rajdhani, system-ui, sans-serif',
+        );
+        activeFontLabel.textContent = fontName;
+        fontButtons.forEach((button) => {
+          button.classList.toggle("active", button.dataset.fontChoice === fontName);
+        });
+        localStorage.setItem("gnf-social-title-font", fontName);
+      };
+
+      fontButtons.forEach((button) => {
+        button.addEventListener("click", () => setProjectFont(button.dataset.fontChoice));
+      });
+
+      setProjectFont("Share Tech Mono");
+
+      const isEmbedMode = document.documentElement.classList.contains("embed-mode");
+      const placeOverlayNearTrigger = (overlayElement, trigger) => {
+        if (!isEmbedMode || !overlayElement) return;
+        const triggerTop = trigger ? trigger.getBoundingClientRect().top + window.scrollY : window.scrollY;
+        const top = Math.max(0, triggerTop - 420);
+        overlayElement.style.setProperty("--overlay-top", `${top}px`);
+      };
+
+      const modalData = {
+        locked: {
+          state: "Locked Raffle",
+          title: "Owl Pack Draw",
+          pill: "4/10 tasks approved",
+          copy: "Complete the required Twitter / X proof and reach the approved-task threshold before the countdown ends.",
+          countdown: "04d 00h 00m 50s",
+          participants: "2 users",
+          approved: "4 / 10",
+          status: "Not completed yet",
+          statusCopy: "Your entry is locked until the raffle task is confirmed and your approved normal task count reaches the threshold.",
+          taskTitle: "Share the official Owl Pack post",
+          taskBody: "Open the task link, complete the Twitter / X action, then return here and confirm the task.",
+          action: "Complete Task",
+          entered: false,
+        },
+        ready: {
+          state: "Ready to Enter",
+          title: "Owl Vault Draw",
+          pill: "10/10 tasks approved",
+          copy: "Your required task is complete. Click Participate on the raffle card to enter the draw.",
+          countdown: "00d 03h 57m 48s",
+          participants: "0 users",
+          approved: "10 / 10",
+          status: "Ready to participate",
+          statusCopy: "You are eligible, but you are not entered until you press Participate.",
+          taskTitle: "Twitter / X entry completed",
+          taskBody: "The task is approved. Return to the raffle card and click Participate to join the draw.",
+          action: "Participate",
+          entered: true,
+        },
+        entered: {
+          state: "Entry Confirmed",
+          title: "Owl Vault Draw",
+          pill: "10/10 tasks approved",
+          copy: "You are entered for this raffle. Keep an eye on the draw timer and reward status.",
+          countdown: "00d 03h 57m 48s",
+          participants: "0 users",
+          approved: "10 / 10",
+          status: "Entry confirmed",
+          statusCopy: "Your Twitter / X task is approved and your raffle entry is active.",
+          taskTitle: "Twitter / X entry completed",
+          taskBody: "No extra action is needed right now. The draw will process automatically when the timer ends.",
+          action: "Entered",
+          entered: true,
+        },
+      };
+
+      const setText = (id, value) => {
+        document.querySelector(id).textContent = value;
+      };
+
+      const openDetails = (type, trigger) => {
+        const data = modalData[type] || modalData.locked;
+        setText("#detailsState", data.state);
+        setText("#detailsTitle", data.title);
+        setText("#detailsTaskPill", data.pill);
+        setText("#detailsCopy", data.copy);
+        setText("#detailsCountdown", data.countdown);
+        setText("#detailsParticipants", data.participants);
+        setText("#detailsApproved", data.approved);
+        setText("#detailsStatus", data.status);
+        setText("#detailsStatusCopy", data.statusCopy);
+        setText("#detailsTaskTitle", data.taskTitle);
+        setText("#detailsTaskBody", data.taskBody);
+        setText("#detailsPrimaryAction", data.action);
+        overlay.classList.toggle("entered-modal", data.entered);
+        placeOverlayNearTrigger(overlay, trigger);
+        overlay.classList.add("is-open");
+        overlay.setAttribute("aria-hidden", "false");
+      };
+
+      document.querySelectorAll("[data-open-details]").forEach((button) => {
+        button.addEventListener("click", (event) => openDetails(button.dataset.openDetails, event.currentTarget));
+      });
+
+      document.querySelector("#participateRaffle")?.addEventListener("click", (event) => {
+        event.currentTarget.classList.add("is-hidden");
+        document.querySelector("#readyRaffleState").textContent = "Entry Confirmed";
+        document.querySelector("#readyRafflePill").textContent = "Entered - 10/10 tasks approved";
+        document.querySelector("#readyRaffleMark").setAttribute("aria-label", "Entry confirmed");
+        document.querySelector("#readyRaffleParticipants").textContent = "1 user";
+        document.querySelector("#readyRaffleStatusLabel").textContent = "Entry status";
+        document.querySelector("#readyRaffleStatus").textContent = "You are entered. Wait for admin draw and prize approval.";
+        document.querySelector('[data-open-details="ready"]').dataset.openDetails = "entered";
+      });
+
+      document.querySelectorAll("[data-task-tab]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const tab = button.dataset.taskTab;
+          document.querySelectorAll("[data-task-tab]").forEach((item) => {
+            item.classList.toggle("active", item === button);
+          });
+          document.querySelector("#availableTasks").classList.toggle("is-active", tab === "available");
+          document.querySelector("#completedTasks").classList.toggle("is-active", tab === "completed");
+        });
+      });
+
+      document.querySelector("[data-close-details]").addEventListener("click", () => {
+        overlay.classList.remove("is-open");
+        overlay.setAttribute("aria-hidden", "true");
+      });
+
+      document.querySelectorAll("[data-open-proof]").forEach((button) => {
+        button.addEventListener("click", (event) => {
+          placeOverlayNearTrigger(proofOverlay, event.currentTarget);
+          proofOverlay.classList.add("is-open");
+          proofOverlay.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      document.querySelectorAll("[data-close-proof]").forEach((button) => {
+        button.addEventListener("click", () => {
+          proofOverlay.classList.remove("is-open");
+          proofOverlay.setAttribute("aria-hidden", "true");
+        });
+      });
+
+      overlay.addEventListener("click", (event) => {
+        if (event.target === overlay) {
+          overlay.classList.remove("is-open");
+          overlay.setAttribute("aria-hidden", "true");
+        }
+      });
+
+      proofOverlay.addEventListener("click", (event) => {
+        if (event.target === proofOverlay) {
+          proofOverlay.classList.remove("is-open");
+          proofOverlay.setAttribute("aria-hidden", "true");
+        }
+      });
+    </script>
+  </body>
+</html>

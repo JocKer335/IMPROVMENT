@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GNF Platform Pages</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="scene scene-socials" id="scene">
+      <header class="gnf-header">
+        <a class="logo" href="#fire-wall" data-route="fire-wall">Government<br />Not Found</a>
+
+        <div class="header-center">
+          <div class="page-kicker" id="pageKicker">GNF Socials Hub</div>
+          <nav class="top-nav" aria-label="Main pages">
+            <button type="button" data-route="inventory">Home</button>
+            <button type="button" data-route="fire-wall">Fire Wall</button>
+            <button type="button" data-route="sacrifice">Sacrifice</button>
+            <button type="button" data-route="store">Store</button>
+            <button class="active" type="button" data-route="socials">Socials</button>
+            <button type="button" data-route="referrals">Referrals</button>
+          </nav>
+        </div>
+
+        <aside class="balance-box">
+          <span>0 GNF Balance</span>
+          <div class="balance-row">
+            <strong>1090191120.00 Burns</strong>
+            <strong>40047 Frags</strong>
+            <button type="button" data-route="dashboard">Dashboard</button>
+          </div>
+        </aside>
+      </header>
+
+      <main class="page-wrap">
+        <section class="page" id="inventory">
+          <section class="guide-card light-guide">
+            <strong>The GNF Inventory - General Hub.</strong>
+            <p>Everything you earn, farm, open, boost, and claim lives here. Track Burn, Leader fragments, farming packs, NFTs, boosters, wallet and socials links, recruits, and ready rewards in one place. Open packs for drops, trigger boosters, and manage your claimed packs from the hub of the platform.</p>
+          </section>
+
+          <section class="inventory-claim">
+            <strong>Reward is ready to claim</strong>
+            <span>10 Burn + 1-10 random fragments</span>
+            <button type="button" data-open-modal="claimRewardModal">Claim Reward</button>
+          </section>
+
+          <div class="fragment-strip">
+            <article class="wolf"><strong>10043 Wolf</strong></article>
+            <article class="owl"><strong>10096 Owl</strong></article>
+            <article class="shark"><strong>10041 Shark</strong></article>
+            <article class="snake"><strong>9894 Snake</strong></article>
+          </div>
+
+          <div class="inventory-stats">
+            <article><strong>1090191120.00</strong><span>Burn Coins</span></article>
+            <article><strong>2</strong><span>Recruits</span></article>
+            <article><strong>343</strong><span>Packs Owned</span></article>
+          </div>
+
+          <section class="connect-panel">
+            <div><span>Wallet:</span><strong>H6A1kx#P5Z...tTf6</strong><button type="button" data-toast="Wallet copied">Copy</button></div>
+            <div><span>X Account:</span><button type="button">Connected @theisar_x</button></div>
+            <div><span>Discord:</span><button type="button">Connected jocker#1180</button></div>
+          </section>
+
+          <section class="inventory-panel">
+            <div class="inventory-tabs">
+              <button class="active" type="button" data-inventory-tab="packs">Packs</button>
+              <button type="button" data-inventory-tab="nfts">NFTs</button>
+              <button type="button" data-inventory-tab="boosters">Boosters</button>
+            </div>
+
+            <div class="inventory-tab active" id="packsTab">
+              <div class="inventory-subhead">
+                <div>
+                  <h2>Packs</h2>
+                  <p>These are opened for rewards. When you open one, it can drop fragments, boosters, items, Burn, or sometimes another pack/NFT reward depending on the tier. Some openings can trigger a bonus reward, like extra Leader fragments.</p>
+                </div>
+                <span>343 Packs</span>
+              </div>
+              <div class="inventory-pack-grid">
+                <article class="inventory-pack common"><span>Common Pack</span><b>87 Ready</b><strong>GNF Break Through</strong></article>
+                <article class="inventory-pack rare"><span>Rare Pack</span><b>100 Ready</b><strong>GNF Break Through</strong></article>
+                <article class="inventory-pack epic"><span>Epic Pack</span><b>52 Ready</b><strong>GNF Break Through</strong></article>
+              </div>
+            </div>
+
+            <div class="inventory-tab" id="nftsTab">
+              <div class="inventory-subhead">
+                <div>
+                  <h2>My NFTs</h2>
+                  <p>These are tied to the four Leader paths. You can buy limited packs from the Store or claim them by sacrificing 100 same-type fragments. Once received, they sit unopened in your Inventory until you reveal them. Revealing shows the NFT/serial or pack result.</p>
+                </div>
+                <span>3 NFTs</span>
+              </div>
+              <div class="mini-filter">
+                <button class="active" type="button">All</button>
+                <button type="button">Opened</button>
+                <button type="button">Unopened</button>
+              </div>
+              <div class="nft-grid">
+                <article><span>Snake</span><strong>GNF NFT</strong></article>
+                <article><span>Snake</span><strong>GNF NFT</strong></article>
+                <article><span>Owl</span><strong>GNF NFT</strong></article>
+              </div>
+            </div>
+
+            <div class="inventory-tab" id="boostersTab">
+              <div class="inventory-subhead">
+                <div>
+                  <h2>Boosters</h2>
+                  <p>Boosters are timed 2x multipliers. Activate one before farming to increase fragment drops from daily gifts and mystery boxes, plus platform points while it is active.</p>
+                </div>
+                <span>1 Booster</span>
+              </div>
+              <div class="booster-grid">
+                <article>
+                  <div class="booster-icon">24H</div>
+                  <strong>24H Accelerator</strong>
+                  <button type="button" data-toast="24H Accelerator selected">Use</button>
+                </article>
+                <article>
+                  <div class="booster-icon purple">48H</div>
+                  <strong>48H Accelerator</strong>
+                  <span>x1</span>
+                  <button type="button" data-open-modal="boosterModal">Use</button>
+                </article>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="page active" id="socials">
+          <section class="guide-card store-guide">
+            <strong>Socials.</strong>
+            <p>Complete social tasks, submit proof, earn fragments, Burn, packs, and raffle access. Every approved action moves you closer to rewards, Leader packs, and stronger platform standing.</p>
+          </section>
+
+          <iframe
+            class="social-project-frame"
+            title="GNF SocialMedia project"
+            src="./SocialMedia/index.html?embed=1&v=9"
+          ></iframe>
+        </section>
+
+        <section class="page" id="referrals">
+          <h1 class="page-pill">Refer A Friend</h1>
+          <section class="guide-card parchment-guide">
+            <strong>Referrals.</strong>
+            <p>Invite friends into GNF with your personal code. Every confirmed referral helps you earn Burn, climb the leaderboard, and unlock milestone rewards as your network grows.</p>
+          </section>
+
+          <section class="glass-panel referral-panel">
+            <div class="stat-strip">
+              <article><strong>2</strong><span>Total Referrals</span></article>
+              <article><strong>150</strong><span>Burn Earned</span></article>
+              <article><strong>#2</strong><span>Leaderboard Position</span></article>
+            </div>
+
+            <div class="wide-tabs">
+              <button class="active" type="button" data-referral-tab="invite">Invite Friends</button>
+              <button type="button" data-referral-tab="rewards">Rewards</button>
+            </div>
+
+            <div class="referral-grid referral-tab-panel active" id="referralInvitePanel">
+              <article class="invite-card">
+                <h2>Share Your Invite Code</h2>
+                <p>Copy and send your code to friends. When they join GNF through your code, they count toward your referrals and reward progress.</p>
+                <div class="invite-code">
+                  <strong>gsKhB166</strong>
+                  <button type="button" data-toast="Invite code copied">Copy</button>
+                </div>
+                <button class="wide-button" type="button" data-toast="Invite link copied">Copy Your Invite Link</button>
+                <div class="squad">
+                  <h3>Your Squad</h3>
+                  <p>You were referred by <strong>tommyg</strong></p>
+                </div>
+              </article>
+
+              <article class="leaderboard-card">
+                <h2>Leaderboard</h2>
+                <p>See the top referrers in the GNF community. Rankings are based on confirmed referrals, so every successful invite moves you closer to the top.</p>
+                <div class="leader-row"><b>#1</b><strong>Survivor</strong><span>3 referrals</span></div>
+                <div class="leader-row"><b>#2</b><strong>jocker</strong><span>2 referrals</span></div>
+                <div class="leader-row"><b>#3</b><strong>tommyg</strong><span>1 referrals</span></div>
+              </article>
+            </div>
+
+            <div class="referral-grid referral-tab-panel" id="referralRewardsPanel">
+              <article class="milestone-card">
+                <h2>Invite Milestones</h2>
+                <p>Claim milestone rewards as your referral count grows. Each completed invite target unlocks more Burn for your account.</p>
+                <div class="milestone-row claimed">
+                  <div><strong>Invite 1 Friend</strong><span>Reward: 50 Burn</span></div>
+                  <b>Claimed</b>
+                </div>
+                <div class="milestone-row claimed">
+                  <div><strong>Invite 2 Friends</strong><span>Reward: 100 Burn</span></div>
+                  <b>Claimed</b>
+                </div>
+                <div class="milestone-row">
+                  <div><strong>Invite 3 Friends</strong><span>Reward: 200 Burn</span></div>
+                  <div class="milestone-status"><span>2/3</span><i style="--progress: 66%"></i></div>
+                </div>
+                <div class="milestone-row">
+                  <div><strong>Invite 4 Friends</strong><span>Reward: 400 Burn</span></div>
+                  <div class="milestone-status"><span>2/4</span><i style="--progress: 50%"></i></div>
+                </div>
+                <div class="milestone-row">
+                  <div><strong>Invite 5 Friends</strong><span>Reward: 1000 Burn</span></div>
+                  <div class="milestone-status"><span>2/5</span><i style="--progress: 40%"></i></div>
+                </div>
+              </article>
+
+              <article class="leaderboard-card">
+                <h2>Leaderboard</h2>
+                <p>See the top referrers in the GNF community. Rankings are based on confirmed referrals, so every successful invite moves you closer to the top.</p>
+                <div class="leader-row"><b>#1</b><strong>Survivor</strong><span>3 referrals</span></div>
+                <div class="leader-row"><b>#2</b><strong>jocker</strong><span>2 referrals</span></div>
+                <div class="leader-row"><b>#3</b><strong>tommyg</strong><span>1 referrals</span></div>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="page" id="store">
+          <section class="guide-card store-guide">
+            <strong>Store.</strong>
+            <p>Top up Burn, grab unopened farming packs, and collect limited NFT packs before they run out. Every pack you buy is sent sealed to your profile gallery, ready to open when you choose. Use the Store to fuel farming, stack rewards, and prepare for your next Sacrifice or reveal.</p>
+          </section>
+
+          <div class="store-layout">
+            <section>
+              <div class="pill-tabs left-tabs">
+                <button class="active" type="button" data-store-tab="packs">Packs</button>
+                <button type="button" data-store-tab="nft-packs">NFT Packs</button>
+              </div>
+              <div class="store-title">
+                <h1 id="storePackTitle">Packs</h1>
+                <p id="storePackDescription">Buy unopened farming packs with Burn. They stay sealed in your profile gallery until you open them for rewards like fragments, boosters, bonus drops, or other platform items.</p>
+              </div>
+              <div class="pack-grid">
+                <article class="pack-card blue">GNF<br />Break<br />Through</article>
+                <article class="pack-card red">GNF<br />Break<br />Through</article>
+                <article class="pack-card green">GNF<br />Break<br />Through</article>
+                <article class="pack-card crimson">GNF<br />Break<br />Through</article>
+                <article class="pack-card gold">GNF<br />Break<br />Through</article>
+              </div>
+            </section>
+
+            <aside class="buy-column">
+              <article class="buy-header">
+                <h2>Buy Burns</h2>
+                <p>Top up your Burn balance with SOL. Burn is the platform currency used to buy packs, NFT packs, boosters, and other Store items. It is internal to the GNF platform and is not the GNF token.</p>
+              </article>
+              <article class="deal-card">
+                <span>Limited Deal</span>
+                <strong>5,000 Burns</strong>
+                <button type="button" data-toast="Limited burn deal selected">Buy Now</button>
+              </article>
+              <div class="burn-grid">
+                <article><span>Starter</span><b>1,000</b><small>0.01 SOL</small><button type="button">Buy</button></article>
+                <article><span>Starter</span><b>3,000</b><small>0.03 SOL</small><button type="button">Buy</button></article>
+                <article><span>Starter</span><b>4,000</b><small>0.04 SOL</small><button type="button">Buy</button></article>
+                <article><span>Starter</span><b>5,000</b><small>0.05 SOL</small><button type="button">Buy</button></article>
+                <article><span>Pro</span><b>10,000</b><small>0.1 SOL</small><button type="button">Buy</button></article>
+                <article><span>Whale</span><b>100,000</b><small>1 SOL</small><button type="button">Buy</button></article>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="page" id="sacrifice">
+          <section class="guide-card sacrifice-guide">
+            <strong>Sacrifice.</strong>
+            <p>Choose a Leader path and spend 100 matching fragments to mint an unopened NFT pack. Each Leader has a limited sacrifice supply, so once that pool is gone, that pack can only come from other platform rewards or Store paths.</p>
+          </section>
+
+          <section class="glass-panel sacrifice-overview">
+            <h1 class="black-pill">Overview</h1>
+            <div class="sacrifice-stats">
+              <article><span>Current Bundle</span><strong>Wolf Pack</strong></article>
+              <article><span>Available Spots</span><strong>9635 / 10000</strong></article>
+              <article><span>Sacrifice Remaining Wolf Pack</span><strong>1395</strong></article>
+              <article><span>Total NFT Collected</span><strong>365 / 10000</strong></article>
+            </div>
+          </section>
+
+          <div class="sacrifice-layout">
+            <aside class="process-card">
+              <h2>Process</h2>
+              <div class="process-step"><strong>1. Connect Wallet</strong><span>Connect your wallet.</span></div>
+              <div class="process-step active"><strong>2. Select Bundle</strong><span>Select your pack.</span></div>
+              <div class="process-step"><strong>3.</strong><span>Sacrifice 100 matching fragments.</span></div>
+              <div class="process-step"><strong>4.</strong><span>Open the sealed pack in Inventory.</span></div>
+              <div class="fragment-box">
+                <h3>Your Fragments</h3>
+                <strong>100/3 <small>/100</small></strong>
+                <div class="green-bar"><span></span></div>
+              </div>
+            </aside>
+
+            <section class="sacrifice-main">
+              <div class="bundle-tabs">
+                <button class="active" type="button">Wolf Pack<small>wolf nft</small></button>
+                <button type="button">Owl Pack<small>owl nft</small></button>
+                <button type="button">Shark Pack<small>shark nft</small></button>
+                <button type="button">Snake Pack<small>snake nft</small></button>
+              </div>
+
+              <div class="info-grid">
+                <article><h2>Description</h2><p>Led by the Alpha Wolf, known to be fierce, loyal, and unbreakable. A master of teamwork and raw strength.</p></article>
+                <article><h2>Benefits</h2><p>Tier 1 - Alpha<br />Tier 2 - Beta<br />Tier 3 - Common<br />Unique Serial</p></article>
+              </div>
+
+              <article class="mint-card">
+                <h2>Claim NFT Pack</h2>
+                <p>100 Flare fragments mints a Wolf Pack, 100 Shard fragments mints an Owl Pack, 100 Pulse fragments mints a Shark Pack, and 100 Snake fragments mints a Snake Pack.</p>
+                <button type="button" data-open-modal="mintModal">Sacrifice</button>
+              </article>
+            </section>
+          </div>
+        </section>
+
+        <section class="page" id="fire-wall">
+          <section class="guide-card fire-guide">
+            <strong>Firewall.</strong>
+            <p>This is where under-floor listings are challenged. Frozen NFTs enter a 6 hour timed window: owners can defrost before expiry, or holders vote to save or burn. Every outcome is tracked here, from live votes to final results and your own voting history.</p>
+          </section>
+
+          <div class="pill-tabs firewall-tabs">
+            <button class="active" type="button" data-firewall-tab="running">Running Votes</button>
+            <button type="button" data-firewall-tab="results">Results Den</button>
+            <button type="button" data-firewall-tab="my-voting">My Voting</button>
+            <button type="button" data-firewall-tab="defrost">Defrost House</button>
+          </div>
+
+          <section class="glass-panel vote-panel firewall-panel active" id="runningPanel">
+            <div class="vote-top">
+              <button type="button">Filters</button>
+              <p>Live Burn or Save votes appear here. Review each frozen NFT, check the timer, and cast your vote before the window closes.</p>
+            </div>
+            <div class="vote-empty">
+              <h2>No live votes yet</h2>
+              <p>Active holder votes appear here.</p>
+              <button type="button" data-toast="Vote list refreshed">Refresh Votes</button>
+            </div>
+          </section>
+
+          <section class="glass-panel vote-panel firewall-panel" id="resultsPanel">
+            <div class="vote-top">
+              <button type="button">Filters</button>
+              <p>Final vote outcomes live here. See which NFTs were saved or burned, the winning side, and the wallet that received the reborn NFT when a burn vote passes.</p>
+            </div>
+            <div class="nft-vote-grid results-grid">
+              <article class="protocol-nft winner">
+                <div class="nft-art">GNF</div>
+                <strong>GNF</strong>
+                <span>Winner</span>
+                <b>6ZuHhj...CBH6FH</b>
+              </article>
+              <article class="protocol-nft winner">
+                <div class="nft-art">GNF</div>
+                <strong>GNF</strong>
+                <span>Winner</span>
+                <b>Dnzdjh...tbh10d</b>
+              </article>
+              <article class="protocol-nft unfreeze">
+                <div class="nft-art">GNF</div>
+                <strong>GNF</strong>
+                <div class="vote-percent">
+                  <span>Burn 0.00%</span>
+                  <span>Forgive 0.00%</span>
+                </div>
+                <button type="button" data-open-modal="unfreezeModal">Unfreeze</button>
+              </article>
+            </div>
+          </section>
+
+          <section class="glass-panel vote-panel firewall-panel" id="myVotingPanel">
+            <div class="vote-top">
+              <button type="button">Filters</button>
+              <p>Your personal voting record. Track every NFT you voted on, how you voted, and the outcome after the vote closes.</p>
+            </div>
+            <div class="vote-empty">
+              <h2>No personal votes yet</h2>
+              <p>Your own votes appear here so you can check your latest choice.</p>
+              <button type="button" data-firewall-tab-jump="running">Go to Running Votes</button>
+            </div>
+          </section>
+
+          <section class="glass-panel vote-panel firewall-panel" id="defrostPanel">
+            <div class="vote-top">
+              <button type="button">Filters</button>
+              <p>Your emergency exit for frozen NFTs. If one of your NFTs is caught below the protected floor, come here to defrost it before the timer expires and prevent it from entering the Burn or Save outcome.</p>
+            </div>
+            <div class="vote-empty">
+              <h2>No defrost actions available</h2>
+              <p>Owners use this area to defreeze before the timer ends.</p>
+              <button type="button" data-firewall-tab-jump="results">Check Results Den</button>
+            </div>
+          </section>
+
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="proofModal" aria-hidden="true">
+      <section class="modal">
+        <button class="close" type="button" data-close-modal>Close</button>
+        <h2>Submit Task Proof</h2>
+        <p>Paste a link or upload screenshot proof so the team can review this raffle task.</p>
+        <textarea placeholder="Paste proof link, note, or account handle"></textarea>
+        <button type="button" data-toast="Proof submitted for review">Submit Verification</button>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="mintModal" aria-hidden="true">
+      <section class="modal">
+        <button class="close" type="button" data-close-modal>Close</button>
+        <h2>Confirm Mint</h2>
+        <p>You are exchanging 100 Wolf fragments for 1 unopened Wolf Pack NFT Pack. The pack lands in inventory after confirmation.</p>
+        <button type="button" data-toast="Wallet confirmation opened">Confirm in Wallet</button>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="claimRewardModal" aria-hidden="true">
+      <section class="modal">
+        <button class="close" type="button" data-close-modal>Close</button>
+        <h2>Claim Inventory Reward</h2>
+        <p>You are claiming 10 Burn plus 1-10 random leader fragments. Burn is internal platform utility, not the GNF token.</p>
+        <button type="button" data-toast="Reward claim started">Confirm Claim</button>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="boosterModal" aria-hidden="true">
+      <section class="modal">
+        <button class="close" type="button" data-close-modal>Close</button>
+        <h2>Use 48H Accelerator</h2>
+        <p>This activates a 2x booster for 48 hours. Only one booster can be active at a time.</p>
+        <button type="button" data-toast="48H Accelerator used">Use Booster</button>
+      </section>
+    </div>
+
+    <div class="modal-backdrop" id="unfreezeModal" aria-hidden="true">
+      <section class="modal">
+        <button class="close" type="button" data-close-modal>Close</button>
+        <h2>Unfreeze NFT</h2>
+        <p>Defreeze resolves the freeze and triggers marketplace delisting. The owner keeps the NFT after wallet confirmation.</p>
+        <button type="button" data-toast="Wallet confirmation opened">Confirm Unfreeze</button>
+      </section>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
