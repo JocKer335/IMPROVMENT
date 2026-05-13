@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <script>if (new URLSearchParams(location.search).has("embed")) document.documentElement.classList.add("embed-mode");</script>
-    <link rel="stylesheet" href="./styles.css?v=17" />
+    <link rel="stylesheet" href="./styles.css?v=18" />
     <style>
       .embed-mode .task-board {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -475,7 +475,7 @@
             </div>
             <div class="section-actions compact">
               <button class="refresh-button" type="button" aria-label="Refresh active raffles">
-                <span aria-hidden="true">↻</span>
+                <span aria-hidden="true">â†»</span>
                 Refresh Raffles
               </button>
             </div>
@@ -514,7 +514,7 @@
 
                 <div class="unlock-path">
                   <div>
-                    <span>Required task</span>
+                    <span>Raffle task</span>
                     <strong>This raffle is visible but not open to you yet. Complete more approved tasks and finish the required raffle task to unlock participation.</strong>
                   </div>
                   <button class="secondary-action" type="button" data-open-details="locked">
@@ -533,7 +533,7 @@
                 <div class="raffle-card-head">
                   <span class="network-pill">Twitter / X</span>
                   <span class="task-pill entered-pill" id="readyRafflePill">Ready - 10/10 tasks approved</span>
-                  <span class="status-mark entered-mark" id="readyRaffleMark" aria-label="Ready to enter" data-tooltip="You�ve met the requirements. Join before the raffle closes to secure your entry." tabindex="0">&#10003;</span>
+                  <span class="status-mark entered-mark" id="readyRaffleMark" aria-label="Ready to enter" data-tooltip="You've met the requirements. Join before the raffle closes to secure your entry." tabindex="0">&#10003;</span>
                 </div>
 
                 <div class="raffle-title-row">
@@ -557,7 +557,7 @@
                 <div class="unlock-path">
                   <div>
                     <span id="readyRaffleStatusLabel">Join now</span>
-                    <strong id="readyRaffleStatus">You�ve met the requirements. Join before the raffle closes to secure your entry.</strong>
+                    <strong id="readyRaffleStatus">You've met the requirements. Join before the raffle closes to secure your entry.</strong>
                   </div>
                   <div class="raffle-actions">
                     <button class="participate-action" type="button" id="participateRaffle">
@@ -713,7 +713,7 @@
         <div class="proof-task-card">
           <div class="proof-status-icon" aria-label="Twitter / X">X</div>
           <div>
-            <span>Twitter / X task</span>
+            <span>Raffle task</span>
             <strong>Like + Retweet</strong>
             <p>Open the post, complete the action, then submit proof for review.</p>
           </div>
@@ -784,7 +784,7 @@
           state: "Locked Raffle",
           title: "Owl Pack Draw",
           pill: "4/10 tasks approved",
-          copy: "Complete the required Twitter / X proof and reach the approved-task threshold before the countdown ends.",
+          copy: "Complete the required raffle task and reach the approved-task threshold before the countdown ends.",
           countdown: "04d 00h 00m 50s",
           participants: "2 users",
           approved: "4 / 10",
@@ -819,7 +819,7 @@
           participants: "0 users",
           approved: "10 / 10",
           status: "Entry confirmed",
-          statusCopy: "Your Twitter / X task is approved and your raffle entry is active.",
+          statusCopy: "Your raffle task is approved and your raffle entry is active.",
           taskTitle: "Twitter / X entry completed",
           taskBody: "No extra action is needed right now. The draw will process automatically when the timer ends.",
           action: "Entered",
