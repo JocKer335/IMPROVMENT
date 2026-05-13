@@ -11,11 +11,14 @@
       rel="stylesheet"
     />
     <script>if (new URLSearchParams(location.search).has("embed")) document.documentElement.classList.add("embed-mode");</script>
-    <link rel="stylesheet" href="./styles.css?v=9" />
+    <link rel="stylesheet" href="./styles.css?v=13" />
     <style>
-      .embed-mode .task-board,
+      .embed-mode .task-board {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      }
+
       .embed-mode .raffle-grid {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
       }
 
       .embed-mode .task-card-bottom,
@@ -36,14 +39,23 @@
       }
 
       .embed-mode .raffle-actions {
-        width: 100% !important;
+        width: auto !important;
         justify-content: flex-start !important;
       }
 
       .embed-mode .unlock-path .secondary-action,
       .embed-mode .participate-action {
+        width: auto !important;
+        min-width: 0 !important;
         margin-top: 8px !important;
-        white-space: normal !important;
+        white-space: nowrap !important;
+      }
+
+      @media (max-width: 980px) {
+        .embed-mode .task-board,
+        .embed-mode .raffle-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        }
       }
 
       @media (max-width: 760px) {

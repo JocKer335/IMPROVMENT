@@ -1598,3 +1598,14 @@ p {
   border-radius: 999px;
   background: linear-gradient(90deg, #8a684a var(--progress), rgba(255, 255, 255, 0.36) var(--progress));
 }
+.vote-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.vote-actions button + button {
+  background: rgba(255, 210, 26, 0.82);
+  color: #2d1b0e;
+  text-align: center;
+}

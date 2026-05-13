@@ -78,7 +78,7 @@
                   <h2>Packs</h2>
                   <p>These are opened for rewards. When you open one, it can drop fragments, boosters, items, Burn, or sometimes another pack/NFT reward depending on the tier. Some openings can trigger a bonus reward, like extra Leader fragments.</p>
                 </div>
-                <span>343 Packs</span>
+                
               </div>
               <div class="inventory-pack-grid">
                 <article class="inventory-pack common"><span>Common Pack</span><b>87 Ready</b><strong>GNF Break Through</strong></article>
@@ -93,7 +93,7 @@
                   <h2>My NFTs</h2>
                   <p>These are tied to the four Leader paths. You can buy limited packs from the Store or claim them by sacrificing 100 same-type fragments. Once received, they sit unopened in your Inventory until you reveal them. Revealing shows the NFT/serial or pack result.</p>
                 </div>
-                <span>3 NFTs</span>
+                
               </div>
               <div class="mini-filter">
                 <button class="active" type="button">All</button>
@@ -113,7 +113,7 @@
                   <h2>Boosters</h2>
                   <p>Boosters are timed 2x multipliers. Activate one before farming to increase fragment drops from daily gifts and mystery boxes, plus platform points while it is active.</p>
                 </div>
-                <span>1 Booster</span>
+                
               </div>
               <div class="booster-grid">
                 <article>
@@ -141,7 +141,7 @@
           <iframe
             class="social-project-frame"
             title="GNF SocialMedia project"
-            src="./SocialMedia/index.html?embed=1&v=9"
+            src="./SocialMedia/index.html?embed=1&v=13"
           ></iframe>
         </section>
 
@@ -291,8 +291,8 @@
           <div class="sacrifice-layout">
             <aside class="process-card">
               <h2>Process</h2>
-              <div class="process-step"><strong>1. Connect Wallet</strong><span>Connect your wallet.</span></div>
-              <div class="process-step active"><strong>2. Select Bundle</strong><span>Select your pack.</span></div>
+              <div class="process-step"><strong>1. Connect your wallet.</strong></div>
+              <div class="process-step active"><strong>2. Select your pack.</strong></div>
               <div class="process-step"><strong>3.</strong><span>Sacrifice 100 matching fragments.</span></div>
               <div class="process-step"><strong>4.</strong><span>Open the sealed pack in Inventory.</span></div>
               <div class="fragment-box">
@@ -339,19 +339,24 @@
 
           <section class="glass-panel vote-panel firewall-panel active" id="runningPanel">
             <div class="vote-top">
-              <button type="button">Filters</button>
+              <div class="vote-actions">
+                <button type="button">Filters</button>
+                <button type="button" data-toast="Vote list refreshed">Refresh Votes</button>
+              </div>
               <p>Live Burn or Save votes appear here. Review each frozen NFT, check the timer, and cast your vote before the window closes.</p>
             </div>
             <div class="vote-empty">
-              <h2>No live votes yet</h2>
-              <p>Active holder votes appear here.</p>
-              <button type="button" data-toast="Vote list refreshed">Refresh Votes</button>
+              
+              
             </div>
           </section>
 
           <section class="glass-panel vote-panel firewall-panel" id="resultsPanel">
             <div class="vote-top">
-              <button type="button">Filters</button>
+              <div class="vote-actions">
+                <button type="button">Filters</button>
+                <button type="button" data-toast="Vote list refreshed">Refresh Votes</button>
+              </div>
               <p>Final vote outcomes live here. See which NFTs were saved or burned, the winning side, and the wallet that received the reborn NFT when a burn vote passes.</p>
             </div>
             <div class="nft-vote-grid results-grid">
@@ -381,25 +386,31 @@
 
           <section class="glass-panel vote-panel firewall-panel" id="myVotingPanel">
             <div class="vote-top">
-              <button type="button">Filters</button>
+              <div class="vote-actions">
+                <button type="button">Filters</button>
+                <button type="button" data-toast="Vote list refreshed">Refresh Votes</button>
+              </div>
               <p>Your personal voting record. Track every NFT you voted on, how you voted, and the outcome after the vote closes.</p>
             </div>
             <div class="vote-empty">
-              <h2>No personal votes yet</h2>
-              <p>Your own votes appear here so you can check your latest choice.</p>
-              <button type="button" data-firewall-tab-jump="running">Go to Running Votes</button>
+              
+              
+              
             </div>
           </section>
 
           <section class="glass-panel vote-panel firewall-panel" id="defrostPanel">
             <div class="vote-top">
-              <button type="button">Filters</button>
+              <div class="vote-actions">
+                <button type="button">Filters</button>
+                <button type="button" data-toast="Vote list refreshed">Refresh Votes</button>
+              </div>
               <p>Your emergency exit for frozen NFTs. If one of your NFTs is caught below the protected floor, come here to defrost it before the timer expires and prevent it from entering the Burn or Save outcome.</p>
             </div>
             <div class="vote-empty">
-              <h2>No defrost actions available</h2>
-              <p>Owners use this area to defreeze before the timer ends.</p>
-              <button type="button" data-firewall-tab-jump="results">Check Results Den</button>
+              
+              
+              
             </div>
           </section>
 
