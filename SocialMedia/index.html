@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <script>if (new URLSearchParams(location.search).has("embed")) document.documentElement.classList.add("embed-mode");</script>
-    <link rel="stylesheet" href="./styles.css?v=13" />
+    <link rel="stylesheet" href="./styles.css?v=16" />
     <style>
       .embed-mode .task-board {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -515,7 +515,7 @@
                 <div class="unlock-path">
                   <div>
                     <span>Required task</span>
-                    <strong>Finish the Twitter / X proof and reach 10 approved tasks.</strong>
+                    <strong>This raffle is visible but not open to you yet. Complete more approved tasks and finish the required raffle task to unlock participation.</strong>
                   </div>
                   <button class="secondary-action" type="button" data-open-details="locked">
                     View Details
@@ -557,7 +557,7 @@
                 <div class="unlock-path">
                   <div>
                     <span id="readyRaffleStatusLabel">Join now</span>
-                    <strong id="readyRaffleStatus">Task complete. Click Participate to enter this raffle.</strong>
+                    <strong id="readyRaffleStatus">You’ve met the requirements. Join before the raffle closes to secure your entry.</strong>
                   </div>
                   <div class="raffle-actions">
                     <button class="participate-action" type="button" id="participateRaffle">
@@ -862,7 +862,7 @@
         document.querySelector("#readyRaffleMark").setAttribute("aria-label", "Entry confirmed");
         document.querySelector("#readyRaffleParticipants").textContent = "1 user";
         document.querySelector("#readyRaffleStatusLabel").textContent = "Entry status";
-        document.querySelector("#readyRaffleStatus").textContent = "You are entered. Wait for admin draw and prize approval.";
+        document.querySelector("#readyRaffleStatus").textContent = "Entry confirmed. Wait for the draw, then return to claim if your wallet wins.";
         document.querySelector('[data-open-details="ready"]').dataset.openDetails = "entered";
       });
 
