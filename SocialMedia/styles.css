@@ -1675,6 +1675,12 @@ h2 {
   white-space: nowrap;
 }
 
+.unlock-path-buttons {
+  grid-template-columns: 1fr;
+  justify-items: end;
+  padding: 12px 16px;
+}
+
 .raffle-actions {
   display: flex;
   flex-wrap: wrap;
