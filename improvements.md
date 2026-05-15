@@ -476,6 +476,83 @@ C:\Users\simo\OneDrive\Bureau\codex\SocialMedia\index.html
 C:\Users\simo\OneDrive\Bureau\codex\SocialMedia\styles.css
 ```
 
+## Latest Live Update - 2026-05-15
+
+This section records the latest Referrals page polish and final positioning decisions.
+
+### Referrals Guide Banner
+
+The top Referrals guide banner is centered and polished:
+
+- `Referrals.` title is centered.
+- Guide copy is centered under the title.
+- The banner uses a warmer parchment gradient treatment.
+- The stylesheet cache-bust is updated in `index.html` so the live website loads the new styling.
+
+### Invite Milestones
+
+The Invite Milestones section now uses a cleaner three-column row layout:
+
+| Left | Center | Right |
+|---|---|---|
+| Invite target | Burn amount | Claimed / progress |
+
+Visible milestone rows:
+
+| Milestone | Center amount | State |
+|---|---|---|
+| Invite 1 Friend | 50 Burn | Claimed |
+| Invite 2 Friends | 100 Burn | Claimed |
+| Invite 3 Friends | 200 Burn | 2/3 progress |
+| Invite 4 Friends | 400 Burn | 2/4 progress |
+| Invite 5 Friends | 1000 Burn | 2/5 progress |
+
+Important final rule:
+
+```text
+Do not show the word "Reward:" before the Burn amount.
+```
+
+### Leaderboard
+
+Leaderboard rows now include the existing pack image:
+
+```text
+SocialMedia/epic-pack.png
+```
+
+The row layout is:
+
+| Left | Name | Center image | Right |
+|---|---|---|---|
+| Rank | Player name | Epic pack image | Referral count |
+
+The pack image is centered in a dedicated image lane between the player name and referral count.
+
+### Leaderboard Copy And Tooltip
+
+Visible leaderboard paragraph stays:
+
+```text
+Top 200 allocation to the token and the top 4 of the pack get the 4 of the Leader Pack NFTs.
+```
+
+The `?` hover tooltip text reads:
+
+```text
+See the top referrers in the GNF community. Rankings are based on confirmed referrals, so every successful invite moves you closer to the top.
+```
+
+The tooltip is styled as a compact blue paragraph box with normal sentence casing and clean wrapping.
+
+### Files Updated In This Pass
+
+```text
+C:\Users\simo\OneDrive\Bureau\codex\IMPROVMENT\index.html
+C:\Users\simo\OneDrive\Bureau\codex\IMPROVMENT\styles.css
+C:\Users\simo\OneDrive\Bureau\codex\IMPROVMENT\improvements.md
+```
+
 ## Latest Live Update - 2026-05-13
 
 This section records the next pass of live edits made after the 2026-05-12 handoff update.
