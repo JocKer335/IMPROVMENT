@@ -690,6 +690,17 @@ p {
   color: var(--brown);
 }
 
+.leaderboard-note {
+  margin: 12px 0 18px;
+  border: 1px solid rgba(90, 50, 23, 0.28);
+  border-radius: 10px;
+  padding: 16px 18px;
+  background: rgba(228, 215, 199, 0.78);
+  color: #5a3217;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
 .leader-row {
   display: grid;
   grid-template-columns: auto 1fr auto;
