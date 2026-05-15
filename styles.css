@@ -788,6 +788,28 @@ p {
   line-height: 1.25;
 }
 
+.leader-list {
+  max-height: 588px;
+  overflow-y: auto;
+  padding-right: 6px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(138, 104, 74, 0.75) rgba(224, 210, 193, 0.36);
+}
+
+.leader-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.leader-list::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: rgba(224, 210, 193, 0.36);
+}
+
+.leader-list::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(138, 104, 74, 0.75);
+}
+
 .leader-row {
   display: grid;
   grid-template-columns: 42px minmax(120px, 1fr) 96px minmax(110px, 1fr);
@@ -821,6 +843,12 @@ p {
   border: 1px solid rgba(255, 210, 26, 0.34);
   border-radius: 6px;
   box-shadow: 0 10px 22px rgba(58, 33, 21, 0.3);
+}
+
+.leader-pack-slot {
+  justify-self: center;
+  width: 44px;
+  height: 58px;
 }
 
 .leader-row > span {
@@ -1688,7 +1716,7 @@ p {
   gap: 16px;
   align-items: center;
   margin-top: 16px;
-  min-height: 58px;
+  min-height: 76px;
   border-radius: 14px;
   padding: 16px;
   background:
