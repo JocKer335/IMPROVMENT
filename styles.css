@@ -794,8 +794,9 @@ p {
   gap: 16px;
   align-items: center;
   margin-top: 12px;
+  min-height: 86px;
   border-radius: 14px;
-  padding: 16px;
+  padding: 14px 16px;
   background:
     linear-gradient(180deg, rgba(232, 220, 204, 0.96), rgba(219, 204, 184, 0.96)),
     #e0d2c1;
@@ -814,8 +815,8 @@ p {
 
 .leader-pack {
   justify-self: center;
-  width: 48px;
-  height: 64px;
+  width: 44px;
+  height: 58px;
   object-fit: cover;
   border: 1px solid rgba(255, 210, 26, 0.34);
   border-radius: 6px;
@@ -1687,6 +1688,7 @@ p {
   gap: 16px;
   align-items: center;
   margin-top: 16px;
+  min-height: 58px;
   border-radius: 14px;
   padding: 16px;
   background:

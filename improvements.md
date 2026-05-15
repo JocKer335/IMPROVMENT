@@ -533,12 +533,16 @@ Visible leaderboard rows now include:
 
 | Rank | Name | Referral count |
 |---|---|---|
-| #1 | Survivor | 3 referrals |
-| #2 | jocker | 2 referrals |
-| #3 | tommyg | 1 referrals |
-| #4 | Raven | 1 referral |
+| #1 | Survivor | 10 referrals |
+| #2 | jocker | 8 referrals |
+| #3 | tommyg | 6 referrals |
+| #4 | Raven | 4 referrals |
+| #5 | Nova | 2 referrals |
+| #6 | Orion | 1 referral |
 
 There is a small added gap between the `Top 200 allocation...` paragraph and the leaderboard rows.
+
+Leaderboard rows are kept at a consistent height with a slightly smaller centered pack image so six rows fit cleanly. Invite milestone rows also use a consistent minimum height so the table lines look even.
 
 ### Leaderboard Copy And Tooltip
 
