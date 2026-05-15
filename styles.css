@@ -732,20 +732,25 @@ p {
   z-index: 20;
   left: 50%;
   top: calc(100% + 12px);
-  width: min(360px, 78vw);
+  width: 320px;
+  max-width: calc(100vw - 48px);
   transform: translateX(-50%) translateY(-4px);
   border: 1px solid rgba(255, 210, 26, 0.32);
   border-radius: 10px;
-  padding: 12px 14px;
+  padding: 14px 16px;
   background: #102f4a;
   color: #ffffff;
   box-shadow: 0 16px 34px rgba(45, 27, 14, 0.36);
   font-size: 15px;
   font-weight: 700;
-  line-height: 1.45;
+  line-height: 1.42;
   opacity: 0;
   pointer-events: none;
   text-align: left;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
   transition: opacity 160ms ease, transform 160ms ease;
 }
 

@@ -458,6 +458,8 @@ See the top referrers in the GNF community. Rankings are based on confirmed refe
 
 The note is shown from the `?` mark on hover/focus using `.leaderboard-heading` and `.leaderboard-info-mark`, while `.leaderboard-copy` keeps the visible paragraph in its original place. The main stylesheet is versioned in `index.html` so the live site loads the updated mark styles.
 
+The hover text is styled as a compact blue paragraph box with normal sentence casing and wrapping, so it does not stretch across the page.
+
 ### Files Changed In Latest Pass
 
 ```text
