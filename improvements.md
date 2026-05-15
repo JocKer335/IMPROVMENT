@@ -529,6 +529,17 @@ The row layout is:
 
 The pack image is centered in a dedicated image lane between the player name and referral count.
 
+Visible leaderboard rows now include:
+
+| Rank | Name | Referral count |
+|---|---|---|
+| #1 | Survivor | 3 referrals |
+| #2 | jocker | 2 referrals |
+| #3 | tommyg | 1 referrals |
+| #4 | Raven | 1 referral |
+
+There is a small added gap between the `Top 200 allocation...` paragraph and the leaderboard rows.
+
 ### Leaderboard Copy And Tooltip
 
 Visible leaderboard paragraph stays:
