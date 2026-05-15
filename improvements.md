@@ -486,6 +486,7 @@ The top Referrals guide banner is centered and polished:
 
 - `Referrals` title is centered without a period.
 - Guide copy is centered under the title.
+- Four large leader artwork previews appear under the guide paragraph in one row: `11.jpg`, `12.png`, `13.png`, and `14.png`.
 - The banner uses a warmer parchment gradient treatment.
 - The stylesheet cache-bust is updated in `index.html` so the live website loads the new styling.
 - The old `Refer A Friend` pill heading above the guide banner was removed.
@@ -547,7 +548,7 @@ Visible leaderboard rows now include:
 
 There is a small added gap between the `Top 200 allocation...` paragraph and the leaderboard rows.
 
-Leaderboard rows are kept at a consistent height with a slightly smaller centered pack image. Only ranks #1 through #4 show the pack image. Ranks #5 through #10 keep the same center spacing but do not show an image. The leaderboard list scrolls internally so the first six rows are visible first and the remaining rows can be reached by scrolling. Invite milestone rows use a consistent minimum height so every line looks even.
+Leaderboard rows are kept at a consistent height with a slightly smaller centered pack image. Only ranks #1 through #4 show the pack image. Ranks #5 through #10 keep the same center spacing but do not show an image. The top four pack images each reveal a matching leader artwork pop-up on hover: Survivor uses `11.jpg`, jocker uses `12.png`, tommyg uses `13.png`, and Raven uses `14.png`. The leaderboard list scrolls internally so the first six rows are visible first and the remaining rows can be reached by scrolling. Invite milestone rows use a consistent minimum height so every line looks even.
 
 ### Leaderboard Copy And Tooltip
 
