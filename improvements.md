@@ -446,6 +446,8 @@ Referral milestones currently shown:
 
 The `Invite Milestones` heading is centered. Each row keeps the invite target on the left, moves the reward text into the center of the row, and keeps the claimed/progress state on the right.
 
+Latest layout polish centers the Referrals guide banner copy, gives milestone rewards a fixed center column, and gives leaderboard pack art a dedicated centered image lane between the player name and referral count.
+
 Latest leaderboard note appears in both Referrals tabs. The `Leaderboard` title is centered, with a small `?` mark beside it. The visible page paragraph stays:
 
 ```text
