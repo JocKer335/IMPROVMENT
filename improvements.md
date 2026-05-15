@@ -405,8 +405,8 @@ The embedded SocialMedia project now has:
 Referrals guide now reads:
 
 ```text
-Referrals.
-Invite friends into GNF with your personal code. Every confirmed referral helps you earn Burn, climb the leaderboard, and unlock milestone rewards as your network grows.
+Referrals
+Invite friends into GNF with your personal link or code. Every confirmed referral helps you earn multiple rewards and accelerate your farming process. Scale your leaderboard position, unlock the 4 Leader cards, and secure your allocation.
 ```
 
 Invite card copy now reads:
@@ -484,10 +484,11 @@ This section records the latest Referrals page polish and final positioning deci
 
 The top Referrals guide banner is centered and polished:
 
-- `Referrals.` title is centered.
+- `Referrals` title is centered without a period.
 - Guide copy is centered under the title.
 - The banner uses a warmer parchment gradient treatment.
 - The stylesheet cache-bust is updated in `index.html` so the live website loads the new styling.
+- The old `Refer A Friend` pill heading above the guide banner was removed.
 
 ### Invite Milestones
 
