@@ -462,6 +462,8 @@ The note is shown from the `?` mark on hover/focus using `.leaderboard-heading` 
 
 The hover text is styled as a compact blue paragraph box with normal sentence casing and wrapping, so it does not stretch across the page.
 
+Leaderboard rows now show the existing `SocialMedia/epic-pack.png` pack image in the centered slot between the player name and referral count.
+
 ### Files Changed In Latest Pass
 
 ```text

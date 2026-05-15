@@ -769,7 +769,7 @@ p {
 
 .leader-row {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   gap: 16px;
   align-items: center;
   margin-top: 12px;
@@ -786,6 +786,15 @@ p {
   border-radius: 999px;
   background: #8a684a;
   color: white;
+}
+
+.leader-pack {
+  justify-self: center;
+  width: 42px;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 8px 18px rgba(58, 33, 21, 0.24);
 }
 
 .store-layout {
