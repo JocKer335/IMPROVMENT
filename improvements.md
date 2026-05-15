@@ -438,11 +438,11 @@ Referral milestones currently shown:
 
 | Milestone | Center reward text | State |
 |---|---|---|
-| Invite 1 Friend | Reward: 50 Burn | Claimed |
-| Invite 2 Friends | Reward: 100 Burn | Claimed |
-| Invite 3 Friends | Reward: 200 Burn | 2/3 progress |
-| Invite 4 Friends | Reward: 400 Burn | 2/4 progress |
-| Invite 5 Friends | Reward: 1000 Burn | 2/5 progress |
+| Invite 1 Friend | 50 Burn | Claimed |
+| Invite 2 Friends | 100 Burn | Claimed |
+| Invite 3 Friends | 200 Burn | 2/3 progress |
+| Invite 4 Friends | 400 Burn | 2/4 progress |
+| Invite 5 Friends | 1000 Burn | 2/5 progress |
 
 The `Invite Milestones` heading is centered. Each row keeps the invite target on the left, moves the reward text into the center of the row, and keeps the claimed/progress state on the right.
 
