@@ -696,7 +696,7 @@ p {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   text-align: center;
 }
 
@@ -708,31 +708,32 @@ p {
   position: relative;
   display: grid;
   place-items: center;
-  width: 28px;
-  height: 28px;
-  border: 1px solid rgba(90, 50, 23, 0.38);
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 210, 26, 0.58);
   border-radius: 999px;
-  background: #e0d2c1;
-  color: #6b4428;
-  font-size: 18px;
+  background: #ffd21a;
+  color: #3a2115;
+  font-size: 20px;
   font-weight: 900;
   cursor: help;
+  box-shadow: 0 0 0 7px rgba(255, 210, 26, 0.14);
 }
 
 .leaderboard-info-mark::after {
   content: attr(data-tooltip);
   position: absolute;
-  z-index: 5;
+  z-index: 20;
   left: 50%;
   top: calc(100% + 12px);
-  width: min(360px, 74vw);
+  width: min(360px, 78vw);
   transform: translateX(-50%) translateY(-4px);
-  border: 1px solid rgba(90, 50, 23, 0.32);
+  border: 1px solid rgba(255, 210, 26, 0.32);
   border-radius: 10px;
-  padding: 14px 16px;
-  background: #e4d7c7;
-  color: #5a3217;
-  box-shadow: 0 16px 34px rgba(45, 27, 14, 0.22);
+  padding: 12px 14px;
+  background: #102f4a;
+  color: #ffffff;
+  box-shadow: 0 16px 34px rgba(45, 27, 14, 0.36);
   font-size: 15px;
   font-weight: 700;
   line-height: 1.45;
@@ -746,6 +747,13 @@ p {
 .leaderboard-info-mark:focus-visible::after {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+.leaderboard-copy {
+  margin: 0 0 12px;
+  color: var(--brown);
+  font-weight: 700;
+  line-height: 1.25;
 }
 
 .leader-row {
