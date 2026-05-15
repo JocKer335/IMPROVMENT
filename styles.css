@@ -727,26 +727,39 @@ p {
 }
 
 .leaderboard-info-mark::after {
-  content: none;
+  content: attr(data-tooltip);
+  position: absolute;
+  z-index: 20;
+  left: 50%;
+  top: calc(100% + 12px);
+  width: min(360px, 78vw);
+  transform: translateX(-50%) translateY(-4px);
+  border: 1px solid rgba(255, 210, 26, 0.32);
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: #102f4a;
+  color: #ffffff;
+  box-shadow: 0 16px 34px rgba(45, 27, 14, 0.36);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+  opacity: 0;
+  pointer-events: none;
+  text-align: left;
+  transition: opacity 160ms ease, transform 160ms ease;
 }
 
-.leaderboard-card:has(.leaderboard-info-mark:hover) .leaderboard-copy,
-.leaderboard-card:has(.leaderboard-info-mark:focus-visible) .leaderboard-copy {
-  background: #102f4a;
-  border-color: rgba(255, 210, 26, 0.42);
-  color: #ffffff;
-  box-shadow: 0 16px 34px rgba(45, 27, 14, 0.28);
+.leaderboard-info-mark:hover::after,
+.leaderboard-info-mark:focus-visible::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .leaderboard-copy {
-  margin: 0 0 16px;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  padding: 12px 14px;
+  margin: 0 0 12px;
   color: var(--brown);
   font-weight: 700;
-  line-height: 1.35;
-  transition: background 160ms ease, border-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+  line-height: 1.25;
 }
 
 .leader-row {
