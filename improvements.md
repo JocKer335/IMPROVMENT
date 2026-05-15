@@ -450,7 +450,7 @@ Latest leaderboard note now replaces the old leaderboard paragraph in both Refer
 Top 200 allocation to the token and the top 4 of the pack get the 4 of the Leader Pack NFTs.
 ```
 
-The note is shown from the `?` mark on hover/focus using `.leaderboard-heading` and `.leaderboard-info-mark`, while `.leaderboard-copy` keeps the text visible in its original place. The main stylesheet is versioned in `index.html` so the live site loads the updated mark styles.
+The note stays in its original paragraph position under the `Leaderboard` title. Hovering/focusing the `?` mark changes that paragraph into a blue tooltip-style box using `.leaderboard-copy`; it no longer opens a floating popup over the leaderboard rows. The main stylesheet is versioned in `index.html` so the live site loads the updated mark styles.
 
 ### Files Changed In Latest Pass
 
