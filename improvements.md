@@ -434,15 +434,17 @@ Rewards / Invite Milestones copy:
 Claim milestone rewards as your referral count grows. Each completed invite target unlocks more Burn for your account.
 ```
 
-Referral milestone rewards currently shown:
+Referral milestones currently shown without visible reward amounts:
 
-| Milestone | Reward | State |
-|---|---|---|
-| Invite 1 Friend | 50 Burn | Claimed |
-| Invite 2 Friends | 100 Burn | Claimed |
-| Invite 3 Friends | 200 Burn | 2/3 progress |
-| Invite 4 Friends | 400 Burn | 2/4 progress |
-| Invite 5 Friends | 1000 Burn | 2/5 progress |
+| Milestone | State |
+|---|---|
+| Invite 1 Friend | Claimed |
+| Invite 2 Friends | Claimed |
+| Invite 3 Friends | 2/3 progress |
+| Invite 4 Friends | 2/4 progress |
+| Invite 5 Friends | 2/5 progress |
+
+The milestone row labels are centered inside each row. The old visible `Reward: 50 Burn`, `Reward: 100 Burn`, `Reward: 200 Burn`, `Reward: 400 Burn`, and `Reward: 1000 Burn` sublines were removed.
 
 Latest leaderboard note appears in both Referrals tabs. The `Leaderboard` title is centered, with a small `?` mark beside it. The visible page paragraph stays:
 

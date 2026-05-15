@@ -1641,13 +1641,24 @@ p {
 
 .milestone-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: 1fr auto 1fr;
   gap: 16px;
   align-items: center;
   margin-top: 16px;
   border-radius: 14px;
   padding: 16px;
   background: #e0d2c1;
+}
+
+.milestone-row > div:first-child {
+  grid-column: 2;
+  text-align: center;
+}
+
+.milestone-row > b,
+.milestone-status {
+  grid-column: 3;
+  justify-self: end;
 }
 
 .milestone-row span,
