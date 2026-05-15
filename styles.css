@@ -695,13 +695,19 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   margin-bottom: 16px;
   text-align: center;
 }
 
-.leaderboard-title-row h2 {
+.leaderboard-heading {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   margin: 0;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .leaderboard-info-mark {
