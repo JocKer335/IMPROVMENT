@@ -444,13 +444,13 @@ Referral milestone rewards currently shown:
 | Invite 4 Friends | 400 Burn | 2/4 progress |
 | Invite 5 Friends | 1000 Burn | 2/5 progress |
 
-Latest leaderboard note now replaces the old leaderboard paragraph in both Referrals tabs:
+Latest leaderboard note now replaces the old leaderboard paragraph in both Referrals tabs. The `Leaderboard` title is centered, with a small `?` mark beside it:
 
 ```text
 Top 200 allocation to the token and the top 4 of the pack get the 4 of the Leader Pack NFTs.
 ```
 
-The note is shown inside a marked box beside the leaderboard, using the new `.leaderboard-note` style.
+The note is shown from the `?` mark using `.leaderboard-title-row` and `.leaderboard-info-mark`.
 
 ### Files Changed In Latest Pass
 
