@@ -444,13 +444,19 @@ Referral milestone rewards currently shown:
 | Invite 4 Friends | 400 Burn | 2/4 progress |
 | Invite 5 Friends | 1000 Burn | 2/5 progress |
 
-Latest leaderboard note appears in both Referrals tabs. The `Leaderboard` title is centered, with a small `?` mark beside it. The same copy also stays visible under the title:
+Latest leaderboard note appears in both Referrals tabs. The `Leaderboard` title is centered, with a small `?` mark beside it. The visible page paragraph stays:
+
+```text
+Top 200 allocation to the token and the top 4 of the pack get the 4 of the Leader Pack NFTs.
+```
+
+The blue `?` hover/focus text reads:
 
 ```text
 See the top referrers in the GNF community. Rankings are based on confirmed referrals, so every successful invite moves you closer to the top.
 ```
 
-The note is shown from the `?` mark on hover/focus using `.leaderboard-heading` and `.leaderboard-info-mark`, while `.leaderboard-copy` keeps the text visible in its original place. The main stylesheet is versioned in `index.html` so the live site loads the updated mark styles.
+The note is shown from the `?` mark on hover/focus using `.leaderboard-heading` and `.leaderboard-info-mark`, while `.leaderboard-copy` keeps the visible paragraph in its original place. The main stylesheet is versioned in `index.html` so the live site loads the updated mark styles.
 
 ### Files Changed In Latest Pass
 
