@@ -208,194 +208,182 @@
             </div>
 
             <div class="referral-grid referral-tab-panel" id="referralRewardsPanel">
-              <article class="milestone-card reward-layout-card">
-                <h2>Reward Card Layout</h2>
-                <p>Clean structure for invite milestones.</p>
+              <article class="milestone-card reward-layout-card referral-tier-card">
+                <h2>Invite Milestones</h2>
+                <p>Rewards unlock as your confirmed invite count grows.</p>
 
-                <div class="sample-reward-stack">
-                  <article class="sample-reward-row">
-                    <div class="sample-reward-head">
-                      <strong>Invite 1 Friend</strong>
-                      <button class="sample-claim-button claim" type="button">Claim</button>
+                <div class="referral-tier-list">
+                  <article class="referral-tier-row claimed">
+                    <strong class="tier-title">Invite 1 Friend</strong>
+                    <div class="tier-rewards">
+                      <span class="tier-reward burn" data-tooltip="15 Burn" tabindex="0"><span class="tier-burn-mark">B</span><b>x15</b></span>
                     </div>
-                    <i class="sample-progress" style="--progress: 100%"></i>
-                    <span class="sample-progress-count">2/1</span>
-                    <div class="sample-reward-label">Rewards</div>
-                    <div class="sample-reward-chips">
-                      <span class="sample-chip burn"><b></b>B x 15</span>
+                    <div class="tier-status">
+                      <span class="tier-claimed">? Claimed</span>
                     </div>
                   </article>
-
-                  <article class="sample-reward-row">
-                    <div class="sample-reward-head">
-                      <strong>Invite 3 Friends</strong>
-                      <button class="sample-claim-button locked" type="button">Locked</button>
+                  <article class="referral-tier-row locked">
+                    <strong class="tier-title">Invite 3 Friends</strong>
+                    <div class="tier-rewards">
+                      <span class="tier-reward burn" data-tooltip="40 Burn" tabindex="0"><span class="tier-burn-mark">B</span><b>x40</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack common" data-tooltip="1 Common Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Common Reward Pack" /><b>x1</b></span>
                     </div>
-                    <i class="sample-progress" style="--progress: 66%"></i>
-                    <span class="sample-progress-count">2/3</span>
-                    <div class="sample-reward-label">Rewards</div>
-                    <div class="sample-reward-chips">
-                      <span class="sample-chip burn"><b></b>B x 40</span>
-                      <span class="sample-chip common"><b></b>x1</span>
+                    <div class="tier-status">
+                      <span class="tier-count">2/3</span>
+                      <i class="tier-progress" style="--progress: 66%"></i>
                     </div>
                   </article>
-
-                  <article class="sample-reward-row">
-                    <div class="sample-reward-head">
-                      <strong>Invite 5 Friends</strong>
-                      <button class="sample-claim-button locked" type="button">Locked</button>
+                  <article class="referral-tier-row locked">
+                    <strong class="tier-title">Invite 5 Friends</strong>
+                    <div class="tier-rewards">
+                      <span class="tier-reward burn" data-tooltip="50 Burn" tabindex="0"><span class="tier-burn-mark">B</span><b>x50</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack common" data-tooltip="2 Common Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Common Reward Pack" /><b>x2</b></span>
                     </div>
-                    <i class="sample-progress" style="--progress: 40%"></i>
-                    <span class="sample-progress-count">2/5</span>
-                    <div class="sample-reward-label">Rewards</div>
-                    <div class="sample-reward-chips">
-                      <span class="sample-chip burn"><b></b>B x 50</span>
-                      <span class="sample-chip common"><b></b>x2</span>
+                    <div class="tier-status">
+                      <span class="tier-count">2/5</span>
+                      <i class="tier-progress" style="--progress: 40%"></i>
                     </div>
                   </article>
-
-                  <article class="sample-reward-row">
-                    <div class="sample-reward-head">
-                      <strong>Invite 10 Friends</strong>
-                      <button class="sample-claim-button locked" type="button">Locked</button>
+                  <article class="referral-tier-row locked">
+                    <strong class="tier-title">Invite 10 Friends</strong>
+                    <div class="tier-rewards">
+                      <span class="tier-reward burn" data-tooltip="100 Burn" tabindex="0"><span class="tier-burn-mark">B</span><b>x100</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack rare" data-tooltip="1 Rare Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Rare Reward Pack" /><b>x1</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack common" data-tooltip="3 Common Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Common Reward Pack" /><b>x3</b></span>
                     </div>
-                    <i class="sample-progress" style="--progress: 20%"></i>
-                    <span class="sample-progress-count">2/10</span>
-                    <div class="sample-reward-label">Rewards</div>
-                    <div class="sample-reward-chips">
-                      <span class="sample-chip burn"><b></b>B x 100</span>
-                      <span class="sample-chip rare"><b></b>x1</span>
-                      <span class="sample-chip common"><b></b>x3</span>
-                    </div>
-                  </article>
-
-                  <article class="sample-reward-row">
-                    <div class="sample-reward-head">
-                      <strong>Invite 20 Friends</strong>
-                      <button class="sample-claim-button locked" type="button">Locked</button>
-                    </div>
-                    <i class="sample-progress" style="--progress: 10%"></i>
-                    <span class="sample-progress-count">2/20</span>
-                    <div class="sample-reward-label">Rewards</div>
-                    <div class="sample-reward-chips">
-                      <span class="sample-chip burn"><b></b>B x 200</span>
-                      <span class="sample-chip rare"><b></b>x2</span>
-                      <span class="sample-chip common"><b></b>x4</span>
+                    <div class="tier-status">
+                      <span class="tier-count">2/10</span>
+                      <i class="tier-progress" style="--progress: 20%"></i>
                     </div>
                   </article>
-
-                  <article class="sample-reward-row">
-                    <div class="sample-reward-head">
-                      <strong>Invite 35 Friends</strong>
-                      <button class="sample-claim-button locked" type="button">Locked</button>
+                  <article class="referral-tier-row locked">
+                    <strong class="tier-title">Invite 20 Friends</strong>
+                    <div class="tier-rewards">
+                      <span class="tier-reward burn" data-tooltip="200 Burn" tabindex="0"><span class="tier-burn-mark">B</span><b>x200</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack rare" data-tooltip="2 Rare Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Rare Reward Pack" /><b>x2</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack common" data-tooltip="4 Common Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Common Reward Pack" /><b>x4</b></span>
                     </div>
-                    <i class="sample-progress" style="--progress: 6%"></i>
-                    <span class="sample-progress-count">2/35</span>
-                    <div class="sample-reward-label">Rewards</div>
-                    <div class="sample-reward-chips">
-                      <span class="sample-chip burn"><b></b>B x 350</span>
-                      <span class="sample-chip epic"><b></b>x1</span>
-                      <span class="sample-chip rare"><b></b>x3</span>
-                      <span class="sample-chip common"><b></b>x5</span>
+                    <div class="tier-status">
+                      <span class="tier-count">2/20</span>
+                      <i class="tier-progress" style="--progress: 10%"></i>
                     </div>
                   </article>
-
-                  <article class="sample-reward-row">
-                    <div class="sample-reward-head">
-                      <strong>Invite 50 Friends</strong>
-                      <button class="sample-claim-button locked" type="button">Locked</button>
+                  <article class="referral-tier-row locked">
+                    <strong class="tier-title">Invite 35 Friends</strong>
+                    <div class="tier-rewards">
+                      <span class="tier-reward burn" data-tooltip="350 Burn" tabindex="0"><span class="tier-burn-mark">B</span><b>x350</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack epic" data-tooltip="1 Epic Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Epic Reward Pack" /><b>x1</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack rare" data-tooltip="3 Rare Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Rare Reward Pack" /><b>x3</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack common" data-tooltip="5 Common Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Common Reward Pack" /><b>x5</b></span>
                     </div>
-                    <i class="sample-progress" style="--progress: 4%"></i>
-                    <span class="sample-progress-count">2/50</span>
-                    <div class="sample-reward-label">Rewards</div>
-                    <div class="sample-reward-chips">
-                      <span class="sample-chip burn"><b></b>B x 500</span>
-                      <span class="sample-chip epic"><b></b>x2</span>
-                      <span class="sample-chip rare"><b></b>x4</span>
-                      <span class="sample-chip common"><b></b>x6</span>
-                    </div>
-                  </article>
-
-                  <article class="sample-reward-row">
-                    <div class="sample-reward-head">
-                      <strong>Invite 75 Friends</strong>
-                      <button class="sample-claim-button locked" type="button">Locked</button>
-                    </div>
-                    <i class="sample-progress" style="--progress: 3%"></i>
-                    <span class="sample-progress-count">2/75</span>
-                    <div class="sample-reward-label">Rewards</div>
-                    <div class="sample-reward-chips">
-                      <span class="sample-chip burn"><b></b>B x 600</span>
-                      <span class="sample-chip mythic"><b></b>x1</span>
-                      <span class="sample-chip epic"><b></b>x3</span>
-                      <span class="sample-chip rare"><b></b>x5</span>
-                      <span class="sample-chip common"><b></b>x7</span>
+                    <div class="tier-status">
+                      <span class="tier-count">2/35</span>
+                      <i class="tier-progress" style="--progress: 6%"></i>
                     </div>
                   </article>
-
-                  <article class="sample-reward-row">
-                    <div class="sample-reward-head">
-                      <strong>Invite 100 Friends</strong>
-                      <button class="sample-claim-button locked" type="button">Locked</button>
+                  <article class="referral-tier-row locked">
+                    <strong class="tier-title">Invite 50 Friends</strong>
+                    <div class="tier-rewards">
+                      <span class="tier-reward burn" data-tooltip="500 Burn" tabindex="0"><span class="tier-burn-mark">B</span><b>x500</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack epic" data-tooltip="2 Epic Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Epic Reward Pack" /><b>x2</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack rare" data-tooltip="4 Rare Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Rare Reward Pack" /><b>x4</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack common" data-tooltip="6 Common Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Common Reward Pack" /><b>x6</b></span>
                     </div>
-                    <i class="sample-progress" style="--progress: 2%"></i>
-                    <span class="sample-progress-count">2/100</span>
-                    <div class="sample-reward-label">Rewards</div>
-                    <div class="sample-reward-chips">
-                      <span class="sample-chip burn"><b></b>B x 1000</span>
-                      <span class="sample-chip mythic"><b></b>x2</span>
-                      <span class="sample-chip epic"><b></b>x4</span>
-                      <span class="sample-chip rare"><b></b>x6</span>
-                      <span class="sample-chip common"><b></b>x8</span>
-                    </div>
-                  </article>
-
-                  <article class="sample-reward-row">
-                    <div class="sample-reward-head">
-                      <strong>Invite 150 Friends</strong>
-                      <button class="sample-claim-button locked" type="button">Locked</button>
-                    </div>
-                    <i class="sample-progress" style="--progress: 1.4%"></i>
-                    <span class="sample-progress-count">2/150</span>
-                    <div class="sample-reward-label">Rewards</div>
-                    <div class="sample-reward-chips">
-                      <span class="sample-chip burn"><b></b>B x 1200</span>
-                      <span class="sample-chip legendary"><b></b>x1</span>
-                      <span class="sample-chip mythic"><b></b>x3</span>
-                      <span class="sample-chip epic"><b></b>x5</span>
-                      <span class="sample-chip rare"><b></b>x7</span>
-                      <span class="sample-chip common"><b></b>x9</span>
+                    <div class="tier-status">
+                      <span class="tier-count">2/50</span>
+                      <i class="tier-progress" style="--progress: 4%"></i>
                     </div>
                   </article>
-
-                  <article class="sample-reward-row">
-                    <div class="sample-reward-head">
-                      <strong>Invite 200 Friends</strong>
-                      <button class="sample-claim-button locked" type="button">Locked</button>
+                  <article class="referral-tier-row locked">
+                    <strong class="tier-title">Invite 75 Friends</strong>
+                    <div class="tier-rewards">
+                      <span class="tier-reward burn" data-tooltip="600 Burn" tabindex="0"><span class="tier-burn-mark">B</span><b>x600</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack mythic" data-tooltip="1 Mythic Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Mythic Reward Pack" /><b>x1</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack epic" data-tooltip="3 Epic Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Epic Reward Pack" /><b>x3</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack rare" data-tooltip="5 Rare Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Rare Reward Pack" /><b>x5</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack common" data-tooltip="7 Common Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Common Reward Pack" /><b>x7</b></span>
                     </div>
-                    <i class="sample-progress" style="--progress: 1%"></i>
-                    <span class="sample-progress-count">2/200</span>
-                    <div class="sample-reward-label">Rewards</div>
-                    <div class="sample-reward-chips">
-                      <span class="sample-chip burn"><b></b>B x 2000</span>
-                      <span class="sample-chip legendary"><b></b>x2</span>
-                      <span class="sample-chip mythic"><b></b>x4</span>
-                      <span class="sample-chip epic"><b></b>x6</span>
-                      <span class="sample-chip rare"><b></b>x8</span>
-                      <span class="sample-chip common"><b></b>x10</span>
-                      <span class="sample-chip badge"><b></b>Top Referrer Badge</span>
+                    <div class="tier-status">
+                      <span class="tier-count">2/75</span>
+                      <i class="tier-progress" style="--progress: 3%"></i>
                     </div>
                   </article>
-
-                </div>
-
-                <div class="sample-instructions">
-                  <strong>How to place everything</strong>
-                  <span>1. Put the invite requirement on the top-left.</span>
-                  <span>2. Put progress number on the top-right.</span>
-                  <span>3. Place the progress bar under the title row.</span>
-                  <span>4. Put rewards in equal chips, max two rows.</span>
-                  <span>5. Keep icon size, spacing, and card height consistent.</span>
+                  <article class="referral-tier-row locked">
+                    <strong class="tier-title">Invite 100 Friends</strong>
+                    <div class="tier-rewards">
+                      <span class="tier-reward burn" data-tooltip="1000 Burn" tabindex="0"><span class="tier-burn-mark">B</span><b>x1000</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack mythic" data-tooltip="2 Mythic Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Mythic Reward Pack" /><b>x2</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack epic" data-tooltip="4 Epic Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Epic Reward Pack" /><b>x4</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack rare" data-tooltip="6 Rare Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Rare Reward Pack" /><b>x6</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack common" data-tooltip="8 Common Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Common Reward Pack" /><b>x8</b></span>
+                    </div>
+                    <div class="tier-status">
+                      <span class="tier-count">2/100</span>
+                      <i class="tier-progress" style="--progress: 2%"></i>
+                    </div>
+                  </article>
+                  <article class="referral-tier-row locked">
+                    <strong class="tier-title">Invite 150 Friends</strong>
+                    <div class="tier-rewards">
+                      <span class="tier-reward burn" data-tooltip="1200 Burn" tabindex="0"><span class="tier-burn-mark">B</span><b>x1200</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack legendary" data-tooltip="1 Legendary Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Legendary Reward Pack" /><b>x1</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack mythic" data-tooltip="3 Mythic Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Mythic Reward Pack" /><b>x3</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack epic" data-tooltip="5 Epic Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Epic Reward Pack" /><b>x5</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack rare" data-tooltip="7 Rare Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Rare Reward Pack" /><b>x7</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack common" data-tooltip="9 Common Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Common Reward Pack" /><b>x9</b></span>
+                    </div>
+                    <div class="tier-status">
+                      <span class="tier-count">2/150</span>
+                      <i class="tier-progress" style="--progress: 1.4%"></i>
+                    </div>
+                  </article>
+                  <article class="referral-tier-row locked">
+                    <strong class="tier-title">Invite 200 Friends</strong>
+                    <div class="tier-rewards">
+                      <span class="tier-reward burn" data-tooltip="2000 Burn" tabindex="0"><span class="tier-burn-mark">B</span><b>x2000</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack legendary" data-tooltip="2 Legendary Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Legendary Reward Pack" /><b>x2</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack mythic" data-tooltip="4 Mythic Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Mythic Reward Pack" /><b>x4</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack epic" data-tooltip="6 Epic Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Epic Reward Pack" /><b>x6</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack rare" data-tooltip="8 Rare Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Rare Reward Pack" /><b>x8</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward pack common" data-tooltip="10 Common Reward Pack" tabindex="0"><img src="./SocialMedia/assets/epic-pack.png" alt="Common Reward Pack" /><b>x10</b></span>
+                      <span class="tier-plus">+</span>
+                      <span class="tier-reward badge" data-tooltip="Top Referrer Badge" tabindex="0"><span class="tier-badge-mark">TOP</span><b>Badge</b></span>
+                    </div>
+                    <div class="tier-status">
+                      <span class="tier-count">2/200</span>
+                      <i class="tier-progress" style="--progress: 1%"></i>
+                    </div>
+                  </article>
                 </div>
               </article>
 

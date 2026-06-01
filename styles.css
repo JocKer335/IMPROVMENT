@@ -3600,3 +3600,198 @@ h3,
   border-radius: 2px;
   background: linear-gradient(180deg, rgba(255,255,255,0.12), transparent 45%, rgba(0,0,0,0.16));
 }
+
+/* Screenshot-style referral reward rows */
+#referralRewardsPanel .referral-tier-card {
+  padding: 18px;
+}
+
+#referralRewardsPanel .referral-tier-card h2 {
+  margin-bottom: 4px;
+}
+
+#referralRewardsPanel .referral-tier-card > p {
+  margin: 0 0 14px;
+  color: rgba(111, 75, 47, 0.82);
+  font-size: 13px;
+  font-weight: 900;
+  text-align: center;
+}
+
+#referralRewardsPanel .referral-tier-list {
+  display: grid;
+  gap: 14px;
+  max-height: 720px;
+  overflow-y: auto;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(138, 104, 74, 0.75) rgba(224, 210, 193, 0.36);
+}
+
+#referralRewardsPanel .referral-tier-list::-webkit-scrollbar { width: 8px; }
+#referralRewardsPanel .referral-tier-list::-webkit-scrollbar-track { border-radius: 999px; background: rgba(224, 210, 193, 0.36); }
+#referralRewardsPanel .referral-tier-list::-webkit-scrollbar-thumb { border-radius: 999px; background: rgba(138, 104, 74, 0.75); }
+
+#referralRewardsPanel .referral-tier-row {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr) 88px;
+  gap: 16px;
+  align-items: center;
+  min-height: 68px;
+  border-radius: 10px;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, rgba(224, 213, 199, 0.98), rgba(205, 192, 176, 0.98));
+  color: #4c2e1b;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.42);
+}
+
+#referralRewardsPanel .referral-tier-row:nth-child(n+4) {
+  min-height: 96px;
+}
+
+#referralRewardsPanel .tier-title {
+  color: #4a2b18;
+  font-size: 13px;
+  font-weight: 1000;
+  line-height: 1.22;
+  text-transform: uppercase;
+}
+
+#referralRewardsPanel .tier-rewards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+#referralRewardsPanel .tier-plus {
+  color: #6b4529;
+  font-size: 16px;
+  font-weight: 1000;
+  line-height: 1;
+}
+
+#referralRewardsPanel .tier-reward {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 30px;
+  color: #3d2515;
+  font-size: 13px;
+  font-weight: 1000;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: help;
+}
+
+#referralRewardsPanel .tier-burn-mark {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: #6b4529;
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: 1000;
+  line-height: 1;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.38);
+}
+
+#referralRewardsPanel .tier-reward.pack img {
+  width: 28px;
+  height: 38px;
+  flex: 0 0 auto;
+  border-radius: 3px;
+  object-fit: cover;
+  border: 2px solid currentColor;
+  box-shadow: 0 5px 10px rgba(61, 37, 21, 0.22);
+}
+
+#referralRewardsPanel .tier-reward.common { color: #b63754; }
+#referralRewardsPanel .tier-reward.rare { color: #1f9860; }
+#referralRewardsPanel .tier-reward.epic { color: #3449c9; }
+#referralRewardsPanel .tier-reward.legendary { color: #b17814; }
+#referralRewardsPanel .tier-reward.mythic { color: #d5a12a; }
+
+#referralRewardsPanel .tier-badge-mark {
+  display: grid;
+  place-items: center;
+  min-width: 34px;
+  height: 22px;
+  border-radius: 5px;
+  padding: 0 4px;
+  background: linear-gradient(135deg, #2d1b0e, #ffd716);
+  color: #2d1b0e;
+  font-size: 9px;
+  font-weight: 1000;
+}
+
+#referralRewardsPanel .tier-status {
+  display: grid;
+  gap: 8px;
+  justify-items: end;
+  align-content: center;
+}
+
+#referralRewardsPanel .tier-count,
+#referralRewardsPanel .tier-claimed {
+  color: rgba(76, 46, 27, 0.76);
+  font-size: 13px;
+  font-weight: 1000;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+#referralRewardsPanel .tier-progress {
+  display: block;
+  width: 76px;
+  height: 7px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #9c704a var(--progress), rgba(230, 207, 166, 0.95) var(--progress));
+}
+
+#referralRewardsPanel .tier-reward::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  z-index: 40;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  min-width: max-content;
+  max-width: 220px;
+  transform: translateX(-50%) translateY(4px);
+  border: 1px solid rgba(255, 210, 26, 0.32);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: #1d140f;
+  color: #fff7ee;
+  box-shadow: 0 12px 24px rgba(45, 27, 14, 0.32);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.2;
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  white-space: normal;
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+
+#referralRewardsPanel .tier-reward:hover::after,
+#referralRewardsPanel .tier-reward:focus-visible::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 720px) {
+  #referralRewardsPanel .referral-tier-row {
+    grid-template-columns: 1fr 76px;
+    gap: 10px;
+  }
+
+  #referralRewardsPanel .tier-rewards {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+}
