@@ -3849,3 +3849,34 @@ h3,
 #referralRewardsPanel .tier-burn-mark {
   margin-right: 2px;
 }
+
+/* Align referral reward rows and label reward area */
+#referralRewardsPanel .referral-tier-row,
+#referralRewardsPanel .referral-tier-row:nth-child(n+4) {
+  min-height: 96px;
+}
+
+#referralRewardsPanel .tier-rewards {
+  position: relative;
+  min-height: 64px;
+  padding-top: 18px;
+}
+
+#referralRewardsPanel .tier-rewards::before {
+  content: "Rewards";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: rgba(76, 46, 27, 0.72);
+  font-size: 10px;
+  font-weight: 1000;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#referralRewardsPanel .tier-status {
+  min-height: 64px;
+}
