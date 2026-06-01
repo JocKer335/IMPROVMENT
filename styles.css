@@ -3945,3 +3945,18 @@ h3,
 #referralRewardsPanel .referral-tier-row .tier-rewards {
   margin-inline: auto;
 }
+
+/* Small multiplier mark under reward packs */
+#referralRewardsPanel .tier-reward.pack b::before {
+  content: "x";
+  font-size: 9px;
+  font-weight: 1000;
+}
+
+#referralRewardsPanel .tier-reward.pack b {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 1px;
+  font-size: 10px;
+}
