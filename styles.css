@@ -3926,3 +3926,22 @@ h3,
 #referralRewardsPanel .tier-reward.pack img {
   display: block;
 }
+
+/* Center and lift referral reward cluster */
+#referralRewardsPanel .tier-rewards {
+  align-self: center;
+  justify-self: center;
+  width: min(100%, 250px);
+  justify-content: center;
+  padding-top: 24px;
+  transform: translateY(-5px);
+}
+
+#referralRewardsPanel .tier-rewards::before {
+  top: 4px;
+}
+
+#referralRewardsPanel .referral-tier-row:nth-child(n+4) .tier-rewards,
+#referralRewardsPanel .referral-tier-row .tier-rewards {
+  margin-inline: auto;
+}
