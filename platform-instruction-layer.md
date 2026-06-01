@@ -42,7 +42,7 @@ Use one short explanation at the top of complex pages.
 
 ### Campaign Badge
 
-> Use a small floating badge for temporary campaigns. It should stay above all pages, show Campaign is live, show progress such as 0/2000 joined, and include a Visit Task button that routes users to the task area.
+> Use a small floating badge for temporary campaigns. It should stay above all pages near the lower-left, show Campaign is live, show progress such as 0/2000 joined, include GNF artwork, and include a Visit Task button that routes users to the task area.
 ## 2. Button Explanation Before Wallet
 
 Before opening the wallet, show a small confirmation modal inside the app.
