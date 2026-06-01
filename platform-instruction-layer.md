@@ -39,6 +39,10 @@ Use one short explanation at the top of complex pages.
 
 > The GNF Inventory - General Hub. Everything you earn, farm, open, boost, and claim lives here. Track Burn, Leader fragments, farming packs, NFTs, boosters, wallet and socials links, recruits, and ready rewards in one place. Open packs for drops, trigger boosters, and manage your claimed packs from the hub of the platform.
 
+
+### Campaign Badge
+
+> Use a small floating badge for temporary campaigns. It should stay above all pages, show Campaign is live, show progress such as 0/2000 joined, and include a Visit Task button that routes users to the task area.
 ## 2. Button Explanation Before Wallet
 
 Before opening the wallet, show a small confirmation modal inside the app.

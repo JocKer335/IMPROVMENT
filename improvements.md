@@ -217,6 +217,14 @@ Referral reward UI rules:
 ```text
 Keep the reward rows compact. Rewards should appear as equal chips, with Burn first and pack rewards after it. Use mini pack artwork inside pack chips when available. Keep the progress count visible near the progress bar so users know how close they are to unlocking Claim.
 ```
+
+## Live Campaign Badge
+
+Current campaign badge behavior:
+
+```text
+A small floating campaign badge appears above all platform pages. It says Campaign is live, shows 0/2000 joined, explains that the first 2,000 task finishers receive the first badge, and includes a Visit Task button. In the current mockup, clicking Visit Task routes the user to Socials and increments the visible local counter by 1, capped at 2,000.
+```
 ## Recommended Empty States
 
 Fire Wall / Running Votes:

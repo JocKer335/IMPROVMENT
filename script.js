@@ -159,6 +159,17 @@ document.querySelectorAll("[data-firewall-tab-jump]").forEach((button) => {
   button.addEventListener("click", () => setFirewallTab(button.dataset.firewallTabJump));
 });
 
+const campaignVisitTask = document.querySelector("#campaignVisitTask");
+const campaignCount = document.querySelector("#campaignCount");
+
+campaignVisitTask?.addEventListener("click", () => {
+  const nextCount = Math.min(Number(campaignCount?.textContent || 0) + 1, 2000);
+  if (campaignCount) campaignCount.textContent = String(nextCount);
+  setRoute("socials");
+  document.querySelector("#socials")?.scrollIntoView({ block: "start", behavior: "smooth" });
+  showToast("Campaign task opened");
+});
+
 
 window.addEventListener('message', (event) => {
   if (event.data?.type !== 'gnf-social-details-open') return;

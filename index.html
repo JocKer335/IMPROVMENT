@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GNF Platform Pages</title>
-    <link rel="stylesheet" href="./styles.css?v=30" />
+    <link rel="stylesheet" href="./styles.css?v=31" />
   </head>
   <body>
     <div class="scene scene-socials" id="scene">
@@ -651,6 +651,15 @@
       </section>
     </div>
 
+    <aside class="campaign-badge" aria-label="Live campaign">
+      <div class="campaign-badge-mark">Badge</div>
+      <div class="campaign-badge-copy">
+        <strong>Campaign is live</strong>
+        <span>First 2,000 task finishers receive the first badge.</span>
+        <b><span id="campaignCount">0</span>/2000 joined</b>
+      </div>
+      <button type="button" id="campaignVisitTask">Visit Task</button>
+    </aside>
     <div class="toast" id="toast"></div>
     <script src="./script.js"></script>
   </body>
