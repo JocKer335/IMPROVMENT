@@ -2411,3 +2411,1192 @@ h3,
   color: #fff8e8 !important;
   font-size: 15px !important;
 }
+
+/* Professional referral reward layout */
+.milestone-stack {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.milestone-card .milestone-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "head action"
+    "bar action"
+    "rewards action";
+  gap: 12px 18px;
+  align-items: center;
+  min-height: 0;
+  margin-top: 0;
+  padding: 18px;
+  border: 1px solid rgba(111, 75, 47, 0.2);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(255, 215, 22, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(239, 228, 212, 0.98), rgba(216, 198, 175, 0.98));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.42), 0 16px 34px rgba(45, 27, 14, 0.12);
+}
+
+.milestone-card .milestone-row.ready {
+  border-color: rgba(255, 215, 22, 0.68);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.42), 0 0 0 3px rgba(255, 215, 22, 0.14), 0 18px 38px rgba(45, 27, 14, 0.16);
+}
+
+.milestone-row-head {
+  grid-area: head;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.milestone-row-head strong {
+  color: #4a2d1b;
+  font-size: 18px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.milestone-row-head span {
+  flex: 0 0 auto;
+  min-width: 58px;
+  margin: 0;
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: rgba(72, 45, 27, 0.12);
+  color: #6f4b2f;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.milestone-progress {
+  grid-area: bar;
+  display: block;
+  width: 100%;
+  height: 9px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8a684a var(--progress), rgba(255, 255, 255, 0.46) var(--progress));
+  box-shadow: inset 0 1px 2px rgba(45, 27, 14, 0.18);
+}
+
+.milestone-rewards {
+  grid-area: rewards;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.reward-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  border: 1px solid rgba(111, 75, 47, 0.16);
+  border-radius: 12px;
+  padding: 9px 11px;
+  background: rgba(255, 247, 235, 0.6);
+  color: #50331f;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.reward-chip img {
+  width: 30px;
+  height: 40px;
+  flex: 0 0 auto;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid rgba(111, 75, 47, 0.22);
+  box-shadow: 0 8px 14px rgba(45, 27, 14, 0.18);
+}
+
+.reward-chip.burn-chip b {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #132f55, #6c8195);
+  color: var(--gold);
+  font-size: 18px;
+  line-height: 1;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24);
+}
+
+.milestone-claim {
+  grid-area: action;
+  min-width: 116px;
+  min-height: 48px;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #ffd716, #f0b83f);
+  color: #352313;
+  font-size: 14px;
+  font-weight: 1000;
+  text-transform: uppercase;
+  box-shadow: 0 13px 24px rgba(93, 59, 22, 0.2);
+}
+
+.milestone-claim.claimed,
+.milestone-claim.locked {
+  background: rgba(111, 75, 47, 0.16);
+  color: rgba(74, 45, 27, 0.72);
+  box-shadow: none;
+}
+
+.milestone-claim.claimed::before {
+  content: "✓";
+  margin-right: 7px;
+}
+
+@media (max-width: 820px) {
+  .milestone-card .milestone-row {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "bar"
+      "rewards"
+      "action";
+  }
+
+  .milestone-rewards {
+    grid-template-columns: 1fr;
+  }
+
+  .milestone-claim {
+    width: 100%;
+  }
+}
+
+.milestone-card .reward-chip {
+  display: flex;
+  margin-top: 0;
+  font-size: 13px;
+}
+
+.milestone-card .milestone-rewards {
+  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+}
+
+.milestone-card .milestone-row.grand-prize {
+  border-color: rgba(255, 215, 22, 0.82);
+  background:
+    radial-gradient(circle at 90% 12%, rgba(255, 215, 22, 0.3), transparent 30%),
+    linear-gradient(180deg, rgba(244, 230, 205, 0.99), rgba(210, 187, 154, 0.99));
+}
+
+.milestone-card .pack-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  border-radius: 9px;
+  color: #fff8e8;
+  font-size: 15px;
+  font-weight: 1000;
+  line-height: 1;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24), 0 8px 14px rgba(45, 27, 14, 0.14);
+}
+
+.milestone-card .pack-common .pack-icon {
+  background: linear-gradient(135deg, #41227c, #8f68ff);
+}
+
+.milestone-card .pack-rare .pack-icon {
+  background: linear-gradient(135deg, #0a6932, #62d64f);
+}
+
+.milestone-card .pack-epic .pack-icon {
+  background: linear-gradient(135deg, #9b2434, #ff5a72);
+}
+
+.milestone-card .pack-legendary .pack-icon {
+  background: linear-gradient(135deg, #a05d00, #ffd34f);
+  color: #2d1b0e;
+}
+
+.milestone-card .pack-mythic .pack-icon {
+  background: linear-gradient(135deg, #102c62, #7cd2ff);
+}
+
+.milestone-card .badge-chip .pack-icon {
+  width: 42px;
+  background: linear-gradient(135deg, #2d1b0e, #ffd716);
+  color: #2d1b0e;
+  font-size: 12px;
+}
+
+/* Compact referral reward table override */
+#referralRewardsPanel .milestone-card {
+  padding: 20px;
+}
+
+#referralRewardsPanel .milestone-card > p {
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+#referralRewardsPanel .milestone-stack {
+  gap: 8px;
+  margin-top: 12px;
+}
+
+#referralRewardsPanel .milestone-card .milestone-row {
+  grid-template-columns: 118px minmax(0, 1fr) 72px;
+  grid-template-areas:
+    "head rewards action"
+    "bar rewards action";
+  gap: 6px 10px;
+  min-height: 58px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(232, 220, 204, 0.96), rgba(216, 202, 183, 0.96));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
+#referralRewardsPanel .milestone-card .milestone-row.ready {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32), 0 0 0 2px rgba(255, 215, 22, 0.14);
+}
+
+#referralRewardsPanel .milestone-row-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+  align-items: center;
+}
+
+#referralRewardsPanel .milestone-row-head strong {
+  font-size: 12px;
+  line-height: 1.1;
+}
+
+#referralRewardsPanel .milestone-row-head span {
+  min-width: 34px;
+  padding: 3px 5px;
+  font-size: 10px;
+}
+
+#referralRewardsPanel .milestone-progress {
+  height: 5px;
+}
+
+#referralRewardsPanel .milestone-card .milestone-rewards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-content: center;
+}
+
+#referralRewardsPanel .milestone-card .reward-chip {
+  min-height: 25px;
+  width: auto;
+  gap: 5px;
+  border-radius: 7px;
+  padding: 3px 6px 3px 4px;
+  font-size: 10px;
+  line-height: 1;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+#referralRewardsPanel .reward-chip.burn-chip b,
+#referralRewardsPanel .milestone-card .pack-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+#referralRewardsPanel .milestone-card .badge-chip .pack-icon {
+  width: 28px;
+  font-size: 8px;
+}
+
+#referralRewardsPanel .milestone-claim {
+  min-width: 0;
+  min-height: 30px;
+  width: 72px;
+  padding: 7px 8px;
+  font-size: 10px;
+  box-shadow: 0 8px 14px rgba(93, 59, 22, 0.12);
+}
+
+@media (max-width: 820px) {
+  #referralRewardsPanel .milestone-card .milestone-row {
+    grid-template-columns: 92px minmax(0, 1fr);
+    grid-template-areas:
+      "head action"
+      "bar action"
+      "rewards rewards";
+  }
+
+  #referralRewardsPanel .milestone-claim {
+    width: 68px;
+    justify-self: end;
+  }
+}
+
+/* Referral reward tray design */
+#referralRewardsPanel {
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+}
+
+#referralRewardsPanel .milestone-card {
+  overflow: hidden;
+  padding: 18px;
+}
+
+#referralRewardsPanel .milestone-stack {
+  gap: 7px;
+}
+
+#referralRewardsPanel .milestone-card .milestone-row {
+  grid-template-columns: 96px minmax(0, 1fr) 78px;
+  grid-template-areas: "head rewards action";
+  min-height: 50px;
+  padding: 8px 9px;
+  border-radius: 9px;
+  border-color: rgba(91, 60, 38, 0.16);
+  background:
+    linear-gradient(90deg, rgba(117, 82, 55, 0.1), transparent 22%),
+    linear-gradient(180deg, rgba(232, 221, 207, 0.98), rgba(209, 195, 177, 0.98));
+}
+
+#referralRewardsPanel .milestone-card .milestone-row.ready {
+  background:
+    linear-gradient(90deg, rgba(255, 215, 22, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(238, 226, 208, 0.99), rgba(213, 197, 174, 0.99));
+}
+
+#referralRewardsPanel .milestone-row-head {
+  align-self: stretch;
+  grid-template-columns: 1fr;
+  align-content: center;
+  gap: 3px;
+  padding-right: 7px;
+  border-right: 1px solid rgba(111, 75, 47, 0.12);
+}
+
+#referralRewardsPanel .milestone-row-head strong {
+  font-size: 11px;
+  line-height: 1.02;
+}
+
+#referralRewardsPanel .milestone-row-head span {
+  justify-self: start;
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+  color: rgba(88, 58, 35, 0.72);
+  font-size: 10px;
+}
+
+#referralRewardsPanel .milestone-progress {
+  position: absolute;
+  right: 10px;
+  bottom: 7px;
+  width: 58px;
+  height: 4px;
+}
+
+#referralRewardsPanel .milestone-card .milestone-rewards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  align-content: center;
+  min-height: 34px;
+  padding: 4px 6px;
+  border: 1px solid rgba(111, 75, 47, 0.1);
+  border-radius: 8px;
+  background: rgba(248, 240, 228, 0.38);
+}
+
+#referralRewardsPanel .milestone-card .reward-chip {
+  position: relative;
+  display: grid;
+  grid-template-columns: 22px minmax(18px, auto);
+  gap: 3px;
+  align-items: center;
+  justify-content: start;
+  min-width: 48px;
+  min-height: 28px;
+  padding: 3px 5px 3px 3px;
+  border-radius: 6px;
+  background: rgba(255, 248, 238, 0.78);
+  color: #4b2d1b;
+  font-size: 10px;
+  font-weight: 1000;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 5px 10px rgba(58, 36, 20, 0.08);
+}
+
+#referralRewardsPanel .reward-chip.burn-chip {
+  min-width: 58px;
+}
+
+#referralRewardsPanel .reward-chip.burn-chip b,
+#referralRewardsPanel .milestone-card .pack-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+#referralRewardsPanel .milestone-card .badge-chip {
+  min-width: 66px;
+}
+
+#referralRewardsPanel .milestone-card .badge-chip .pack-icon {
+  width: 28px;
+  font-size: 8px;
+}
+
+#referralRewardsPanel .milestone-claim {
+  align-self: start;
+  justify-self: end;
+  width: 66px;
+  min-height: 26px;
+  border-radius: 7px;
+  padding: 5px 7px;
+  font-size: 9px;
+}
+
+@media (max-width: 980px) {
+  #referralRewardsPanel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  #referralRewardsPanel .milestone-card .milestone-row {
+    grid-template-columns: 78px minmax(0, 1fr);
+    grid-template-areas:
+      "head action"
+      "rewards rewards";
+  }
+
+  #referralRewardsPanel .milestone-progress {
+    right: 12px;
+    top: 38px;
+    bottom: auto;
+  }
+}
+
+/* Fixed-slot reward board: every pack has a permanent place */
+#referralRewardsPanel {
+  grid-template-columns: minmax(0, 1.22fr) minmax(300px, 0.78fr);
+}
+
+#referralRewardsPanel .milestone-card {
+  padding: 18px;
+}
+
+#referralRewardsPanel .milestone-card > p {
+  margin-bottom: 12px;
+  font-size: 13px;
+  line-height: 1.28;
+}
+
+#referralRewardsPanel .reward-board {
+  gap: 6px;
+  margin-top: 12px;
+}
+
+#referralRewardsPanel .reward-board-head,
+#referralRewardsPanel .milestone-card .milestone-row {
+  display: grid;
+  grid-template-columns: 90px repeat(7, minmax(40px, 1fr)) 62px;
+  gap: 5px;
+  align-items: center;
+}
+
+#referralRewardsPanel .reward-board-head {
+  padding: 0 7px 3px;
+  color: rgba(86, 55, 34, 0.72);
+  font-size: 8px;
+  font-weight: 1000;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#referralRewardsPanel .reward-board-head span:first-child {
+  text-align: left;
+}
+
+#referralRewardsPanel .milestone-card .milestone-row {
+  grid-template-areas: none;
+  min-height: 46px;
+  padding: 6px 7px;
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(112, 75, 47, 0.1), transparent 20%),
+    linear-gradient(180deg, rgba(235, 224, 210, 0.98), rgba(211, 197, 180, 0.98));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.42), 0 7px 14px rgba(49, 30, 18, 0.08);
+}
+
+#referralRewardsPanel .milestone-card .milestone-row.ready {
+  border-color: rgba(255, 215, 22, 0.62);
+  background:
+    linear-gradient(90deg, rgba(255, 215, 22, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(239, 228, 211, 0.99), rgba(215, 198, 176, 0.99));
+}
+
+#referralRewardsPanel .milestone-card .milestone-row.grand-prize {
+  border-color: rgba(255, 215, 22, 0.75);
+  background:
+    linear-gradient(90deg, rgba(255, 215, 22, 0.2), rgba(255, 215, 22, 0.04) 46%, transparent),
+    linear-gradient(180deg, rgba(240, 224, 199, 0.99), rgba(207, 187, 158, 0.99));
+}
+
+#referralRewardsPanel .milestone-row-head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3px;
+  align-content: center;
+  height: 100%;
+  padding-right: 6px;
+  border-right: 1px solid rgba(111, 75, 47, 0.12);
+}
+
+#referralRewardsPanel .milestone-row-head strong {
+  color: #442816;
+  font-size: 10px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+#referralRewardsPanel .milestone-row-head span {
+  justify-self: start;
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+  color: rgba(86, 55, 34, 0.7);
+  font-size: 9px;
+}
+
+#referralRewardsPanel .milestone-progress {
+  position: static;
+  width: 72px;
+  max-width: 100%;
+  height: 4px;
+}
+
+#referralRewardsPanel .milestone-card .milestone-rewards {
+  display: contents;
+}
+
+#referralRewardsPanel .reward-slot {
+  display: grid;
+  grid-template-rows: 24px 11px;
+  justify-items: center;
+  align-items: center;
+  min-width: 0;
+  min-height: 38px;
+  border: 1px solid rgba(97, 65, 43, 0.16);
+  border-radius: 7px;
+  padding: 3px;
+  background: rgba(255, 249, 239, 0.56);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.52);
+}
+
+#referralRewardsPanel .reward-slot.empty {
+  opacity: 0.22;
+  background: rgba(107, 77, 56, 0.08);
+  box-shadow: none;
+}
+
+#referralRewardsPanel .reward-slot.empty::before {
+  content: "";
+  width: 16px;
+  height: 22px;
+  border: 1px dashed rgba(92, 63, 42, 0.32);
+  border-radius: 4px;
+}
+
+#referralRewardsPanel .reward-slot b {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 24px;
+  border-radius: 4px 4px 3px 3px;
+  color: #fff8e8;
+  font-size: 10px;
+  font-weight: 1000;
+  line-height: 1;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.32), 0 4px 7px rgba(49, 30, 18, 0.14);
+}
+
+#referralRewardsPanel .reward-slot b::before {
+  content: "";
+  position: absolute;
+  inset: 3px 3px auto;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.35);
+}
+
+#referralRewardsPanel .reward-slot em {
+  color: #3f2919;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 1000;
+  line-height: 1;
+}
+
+#referralRewardsPanel .burn-slot b {
+  background: linear-gradient(135deg, #132f55, #7c91a8);
+  color: var(--gold);
+}
+
+#referralRewardsPanel .pack-common b {
+  background: linear-gradient(135deg, #34146c, #8f68ff);
+}
+
+#referralRewardsPanel .pack-rare b {
+  background: linear-gradient(135deg, #075a2c, #69dc52);
+}
+
+#referralRewardsPanel .pack-epic b {
+  background: linear-gradient(135deg, #8d1c2e, #ff526d);
+}
+
+#referralRewardsPanel .pack-legendary b {
+  background: linear-gradient(135deg, #9a5c00, #ffd24c);
+  color: #2b1909;
+}
+
+#referralRewardsPanel .pack-mythic b {
+  background: linear-gradient(135deg, #0d2a66, #75d5ff);
+}
+
+#referralRewardsPanel .badge-slot b {
+  width: 30px;
+  background: linear-gradient(135deg, #21140c, #ffd716);
+  color: #2b1909;
+  font-size: 8px;
+}
+
+#referralRewardsPanel .milestone-claim {
+  justify-self: end;
+  width: 58px;
+  min-height: 28px;
+  border-radius: 7px;
+  padding: 5px 6px;
+  font-size: 9px;
+}
+
+@media (max-width: 1120px) {
+  #referralRewardsPanel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  #referralRewardsPanel .reward-board-head {
+    display: none;
+  }
+
+  #referralRewardsPanel .milestone-card .milestone-row {
+    grid-template-columns: 78px repeat(4, minmax(42px, 1fr)) 58px;
+  }
+
+  #referralRewardsPanel .reward-slot:nth-of-type(n+5) {
+    margin-top: 4px;
+  }
+}
+
+/* Clean compact reward tray v2 */
+#referralRewardsPanel {
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+}
+
+#referralRewardsPanel .reward-board-head {
+  display: none;
+}
+
+#referralRewardsPanel .milestone-card {
+  padding: 20px;
+}
+
+#referralRewardsPanel .milestone-card > p {
+  max-width: 560px;
+  margin: 0 auto 14px;
+  font-size: 13px;
+  line-height: 1.32;
+  text-align: center;
+}
+
+#referralRewardsPanel .reward-board {
+  gap: 9px;
+  margin-top: 12px;
+}
+
+#referralRewardsPanel .milestone-card .milestone-row {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr) 76px;
+  gap: 10px;
+  align-items: center;
+  min-height: 64px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background:
+    linear-gradient(90deg, rgba(112, 75, 47, 0.12), transparent 30%),
+    linear-gradient(180deg, rgba(235, 224, 210, 0.98), rgba(211, 197, 180, 0.98));
+}
+
+#referralRewardsPanel .milestone-card .milestone-row.ready {
+  border-color: rgba(255, 215, 22, 0.66);
+  background:
+    linear-gradient(90deg, rgba(255, 215, 22, 0.2), transparent 34%),
+    linear-gradient(180deg, rgba(240, 229, 212, 0.99), rgba(214, 198, 176, 0.99));
+}
+
+#referralRewardsPanel .milestone-row-head {
+  display: grid;
+  gap: 5px;
+  align-content: center;
+  height: 100%;
+  padding-right: 10px;
+  border-right: 1px solid rgba(111, 75, 47, 0.14);
+}
+
+#referralRewardsPanel .milestone-row-head strong {
+  color: #422717;
+  font-size: 12px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+#referralRewardsPanel .milestone-row-head span {
+  justify-self: start;
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+  color: rgba(86, 55, 34, 0.72);
+  font-size: 10px;
+  font-weight: 900;
+}
+
+#referralRewardsPanel .milestone-progress {
+  position: static;
+  width: 78px;
+  max-width: 100%;
+  height: 5px;
+}
+
+#referralRewardsPanel .milestone-card .milestone-rewards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  align-content: center;
+  min-height: 42px;
+  padding: 6px;
+  border: 1px solid rgba(111, 75, 47, 0.1);
+  border-radius: 10px;
+  background: rgba(249, 241, 229, 0.5);
+}
+
+#referralRewardsPanel .reward-slot.empty {
+  display: none;
+}
+
+#referralRewardsPanel .reward-slot {
+  display: grid;
+  grid-template-columns: 24px auto;
+  grid-template-rows: 1fr;
+  gap: 5px;
+  align-items: center;
+  justify-items: start;
+  min-width: 58px;
+  min-height: 32px;
+  border-radius: 8px;
+  padding: 4px 7px 4px 4px;
+  background: rgba(255, 249, 239, 0.78);
+}
+
+#referralRewardsPanel .reward-slot b {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  font-size: 10px;
+}
+
+#referralRewardsPanel .reward-slot em {
+  color: #3f2919;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 1000;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+#referralRewardsPanel .badge-slot {
+  min-width: 78px;
+}
+
+#referralRewardsPanel .badge-slot b {
+  width: 34px;
+  font-size: 8px;
+}
+
+#referralRewardsPanel .milestone-claim {
+  justify-self: end;
+  width: 68px;
+  min-height: 34px;
+  border-radius: 9px;
+  padding: 7px 8px;
+  font-size: 10px;
+}
+
+@media (max-width: 1120px) {
+  #referralRewardsPanel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  #referralRewardsPanel .milestone-card .milestone-row {
+    grid-template-columns: 88px 1fr;
+    grid-template-areas:
+      "head action"
+      "rewards rewards";
+  }
+
+  #referralRewardsPanel .milestone-row-head {
+    grid-area: head;
+  }
+
+  #referralRewardsPanel .milestone-rewards {
+    grid-area: rewards;
+  }
+
+  #referralRewardsPanel .milestone-claim {
+    grid-area: action;
+  }
+}
+
+/* Restored original reward card layout */
+#referralRewardsPanel {
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+}
+
+#referralRewardsPanel .reward-layout-card {
+  overflow: hidden;
+  padding: 18px;
+  background:
+    radial-gradient(circle at 90% 100%, rgba(111, 75, 47, 0.16), transparent 30%),
+    rgba(222, 211, 197, 0.54);
+}
+
+#referralRewardsPanel .reward-layout-card h2 {
+  margin-bottom: 4px;
+}
+
+#referralRewardsPanel .reward-layout-card > p {
+  margin: 0 0 16px;
+  color: rgba(111, 75, 47, 0.82);
+  font-size: 13px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.sample-reward-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.sample-reward-row {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  grid-template-areas:
+    "head head"
+    "bar bar"
+    "label chips";
+  gap: 8px 12px;
+  min-height: 116px;
+  border-radius: 12px;
+  padding: 14px 16px 16px;
+  background: linear-gradient(180deg, rgba(232, 222, 209, 0.98), rgba(210, 198, 181, 0.98));
+  color: #5b3b25;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.42), 5px 7px 0 rgba(0, 0, 0, 0.9);
+}
+
+.sample-reward-head {
+  grid-area: head;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sample-reward-head strong {
+  color: #4b2e1b;
+  font-size: 13px;
+  font-weight: 1000;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.sample-reward-head span {
+  color: rgba(75, 46, 27, 0.72);
+  font-size: 11px;
+  font-weight: 1000;
+}
+
+.sample-progress {
+  grid-area: bar;
+  display: block;
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #c7924d var(--progress), rgba(231, 207, 168, 0.95) var(--progress));
+}
+
+.sample-reward-label {
+  grid-area: label;
+  align-self: start;
+  color: rgba(75, 46, 27, 0.78);
+  font-size: 11px;
+  font-weight: 1000;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.sample-reward-chips {
+  grid-area: chips;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.sample-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 70px;
+  min-height: 32px;
+  border: 1px solid rgba(117, 82, 55, 0.34);
+  border-radius: 8px;
+  padding: 5px 10px 5px 7px;
+  background: rgba(248, 238, 222, 0.9);
+  color: #4b2e1b;
+  font-size: 12px;
+  font-weight: 1000;
+  line-height: 1;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.58);
+}
+
+.sample-chip b {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid rgba(55, 35, 22, 0.38);
+}
+
+.sample-chip.burn b { border-radius: 999px; background: #9eb1bd; }
+.sample-chip.common b { background: #b63754; }
+.sample-chip.rare b { background: #36ac77; }
+.sample-chip.epic b { background: #324acf; }
+.sample-chip.mythic b { background: #d6a329; }
+
+.sample-instructions {
+  display: grid;
+  gap: 5px;
+  margin-top: 18px;
+  color: #f2d790;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.sample-instructions strong {
+  margin-bottom: 3px;
+  color: #ffe39b;
+  font-size: 14px;
+}
+
+.sample-instructions span {
+  color: #f0dfc6;
+}
+
+@media (max-width: 1120px) {
+  #referralRewardsPanel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .sample-reward-row {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "bar"
+      "label"
+      "chips";
+  }
+
+  .sample-reward-label {
+    line-height: 1;
+  }
+}
+
+/* Full invite ladder in the restored reward layout */
+#referralRewardsPanel .sample-reward-stack {
+  max-height: 720px;
+  overflow-y: auto;
+  padding-right: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(138, 104, 74, 0.75) rgba(224, 210, 193, 0.36);
+}
+
+#referralRewardsPanel .sample-reward-stack::-webkit-scrollbar {
+  width: 8px;
+}
+
+#referralRewardsPanel .sample-reward-stack::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: rgba(224, 210, 193, 0.36);
+}
+
+#referralRewardsPanel .sample-reward-stack::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(138, 104, 74, 0.75);
+}
+
+#referralRewardsPanel .sample-reward-row {
+  min-height: 104px;
+}
+
+#referralRewardsPanel .sample-chip.legendary b {
+  background: #d6a329;
+}
+
+#referralRewardsPanel .sample-chip.badge b {
+  width: 28px;
+  background: linear-gradient(135deg, #2c1b0f, #ffd716);
+}
+
+/* Claim button in reward-card header */
+#referralRewardsPanel .sample-claim-button {
+  min-width: 70px;
+  min-height: 28px;
+  border: 0;
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: linear-gradient(135deg, #ffd716, #e8b842);
+  color: #3a2115;
+  font-size: 11px;
+  font-weight: 1000;
+  line-height: 1;
+  text-transform: uppercase;
+  box-shadow: 0 8px 16px rgba(91, 55, 25, 0.16), inset 0 1px 0 rgba(255,255,255,0.38);
+}
+
+#referralRewardsPanel .sample-claim-button.locked {
+  background: rgba(111, 75, 47, 0.16);
+  color: rgba(75, 46, 27, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.22);
+}
+
+#referralRewardsPanel .sample-reward-head span {
+  display: none;
+}
+
+/* Progress count beside restored reward progress bar */
+#referralRewardsPanel .sample-reward-row {
+  grid-template-columns: 92px minmax(0, 1fr) 56px;
+  grid-template-areas:
+    "head head head"
+    "bar bar count"
+    "label chips chips";
+}
+
+#referralRewardsPanel .sample-progress-count {
+  grid-area: count;
+  align-self: center;
+  justify-self: end;
+  color: rgba(75, 46, 27, 0.72);
+  font-size: 11px;
+  font-weight: 1000;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  #referralRewardsPanel .sample-reward-row {
+    grid-template-columns: 1fr 56px;
+    grid-template-areas:
+      "head head"
+      "bar count"
+      "label label"
+      "chips chips";
+  }
+}
+
+/* Mini pack art inside invite reward chips */
+#referralRewardsPanel .sample-chip.common b,
+#referralRewardsPanel .sample-chip.rare b,
+#referralRewardsPanel .sample-chip.epic b,
+#referralRewardsPanel .sample-chip.legendary b,
+#referralRewardsPanel .sample-chip.mythic b {
+  width: 22px;
+  height: 28px;
+  border-radius: 4px;
+  background-image: var(--pack-art), linear-gradient(180deg, rgba(255,255,255,0.18), rgba(0,0,0,0.1));
+  background-size: cover;
+  background-position: center;
+  border: 2px solid currentColor;
+  box-shadow: 0 4px 9px rgba(58, 36, 20, 0.2), inset 0 1px 0 rgba(255,255,255,0.28);
+}
+
+#referralRewardsPanel .sample-chip.common,
+#referralRewardsPanel .sample-chip.rare,
+#referralRewardsPanel .sample-chip.epic,
+#referralRewardsPanel .sample-chip.legendary,
+#referralRewardsPanel .sample-chip.mythic {
+  --pack-art: url("./SocialMedia/assets/epic-pack.png");
+}
+
+#referralRewardsPanel .sample-chip.common { color: #b63754; }
+#referralRewardsPanel .sample-chip.rare { color: #2d9f69; }
+#referralRewardsPanel .sample-chip.epic { color: #324acf; }
+#referralRewardsPanel .sample-chip.legendary { color: #b77a14; }
+#referralRewardsPanel .sample-chip.mythic { color: #d6a329; }
+
+#referralRewardsPanel .sample-chip.common,
+#referralRewardsPanel .sample-chip.rare,
+#referralRewardsPanel .sample-chip.epic,
+#referralRewardsPanel .sample-chip.legendary,
+#referralRewardsPanel .sample-chip.mythic,
+#referralRewardsPanel .sample-chip.badge {
+  min-height: 38px;
+  padding-left: 6px;
+}
+
+#referralRewardsPanel .sample-chip.common b::after,
+#referralRewardsPanel .sample-chip.rare b::after,
+#referralRewardsPanel .sample-chip.epic b::after,
+#referralRewardsPanel .sample-chip.legendary b::after,
+#referralRewardsPanel .sample-chip.mythic b::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.12), transparent 45%, rgba(0,0,0,0.16));
+}
