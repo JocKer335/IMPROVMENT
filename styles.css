@@ -3880,3 +3880,14 @@ h3,
 #referralRewardsPanel .tier-status {
   min-height: 64px;
 }
+
+/* Make reward label stronger than invite text */
+#referralRewardsPanel .tier-rewards::before {
+  font-size: 15px;
+  font-weight: 1000;
+  letter-spacing: 0.03em;
+}
+
+#referralRewardsPanel .tier-title {
+  font-size: 12px;
+}
