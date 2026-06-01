@@ -3795,3 +3795,31 @@ h3,
     justify-content: flex-start;
   }
 }
+
+/* Cleaner referral rewards: hide pack quantities, keep hover details */
+#referralRewardsPanel .tier-reward.pack b,
+#referralRewardsPanel .tier-reward.badge b {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+#referralRewardsPanel .tier-reward.pack {
+  gap: 0;
+}
+
+#referralRewardsPanel .tier-reward.pack img {
+  width: 30px;
+  height: 42px;
+}
+
+#referralRewardsPanel .tier-reward.badge .tier-badge-mark {
+  min-width: 34px;
+}
+
+#referralRewardsPanel .tier-plus {
+  margin: 0 -2px;
+}
