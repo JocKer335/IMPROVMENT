@@ -3823,3 +3823,29 @@ h3,
 #referralRewardsPanel .tier-plus {
   margin: 0 -2px;
 }
+
+/* Clean reward row: icons only, details on hover */
+#referralRewardsPanel .tier-plus {
+  display: none;
+}
+
+#referralRewardsPanel .tier-reward.burn b {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+#referralRewardsPanel .tier-rewards {
+  gap: 8px;
+}
+
+#referralRewardsPanel .tier-reward {
+  gap: 0;
+}
+
+#referralRewardsPanel .tier-burn-mark {
+  margin-right: 2px;
+}
