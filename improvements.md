@@ -187,15 +187,36 @@ Referrals guide:
 
 ```text
 Referrals turn invites into milestone progress.
-Share your invite code. Qualified referrals unlock Burn milestones and leaderboard progress. Connect X and Discord to claim referral rewards.
+Share your invite code. Qualified referrals unlock Burn milestones, Reward Packs, leaderboard progress, and the Top Referrer Badge at the highest tier. Connect X and Discord to qualify referral activity and claim unlocked rewards.
 ```
 
-Recommendation:
+Current referral rewards page:
 
 ```text
-Do not publish exact referral percentages until the founder confirms the final backend rule.
+The Rewards tab uses the compact Reward Card Layout. Each invite milestone card shows the invite requirement on the top-left, a Claim or Locked button on the top-right, the progress bar with the current progress count underneath, and reward chips in the middle.
 ```
 
+Referral milestone ladder:
+
+```text
+1 invite    - 15 Burn
+3 invites   - 40 Burn + 1 Common Reward Pack
+5 invites   - 50 Burn + 2 Common Reward Pack
+10 invites  - 100 Burn + 1 Rare Reward Pack + 3 Common Reward Pack
+20 invites  - 200 Burn + 2 Rare Reward Pack + 4 Common Reward Pack
+35 invites  - 350 Burn + 1 Epic Reward Pack + 3 Rare Reward Pack + 5 Common Reward Pack
+50 invites  - 500 Burn + 2 Epic Reward Pack + 4 Rare Reward Pack + 6 Common Reward Pack
+75 invites  - 600 Burn + 1 Mythic Reward Pack + 3 Epic Reward Pack + 5 Rare Reward Pack + 7 Common Reward Pack
+100 invites - 1000 Burn + 2 Mythic Reward Pack + 4 Epic Reward Pack + 6 Rare Reward Pack + 8 Common Reward Pack
+150 invites - 1200 Burn + 1 Legendary Reward Pack + 3 Mythic Reward Pack + 5 Epic Reward Pack + 7 Rare Reward Pack + 9 Common Reward Pack
+200 invites - 2000 Burn + 2 Legendary Reward Pack + 4 Mythic Reward Pack + 6 Epic Reward Pack + 8 Rare Reward Pack + 10 Common Reward Pack + Top Referrer Badge
+```
+
+Referral reward UI rules:
+
+```text
+Keep the reward rows compact. Rewards should appear as equal chips, with Burn first and pack rewards after it. Use mini pack artwork inside pack chips when available. Keep the progress count visible near the progress bar so users know how close they are to unlocking Claim.
+```
 ## Recommended Empty States
 
 Fire Wall / Running Votes:

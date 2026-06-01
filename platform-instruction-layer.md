@@ -33,7 +33,7 @@ Use one short explanation at the top of complex pages.
 
 ### Referrals
 
-> Share your invite code. Qualified referrals unlock Burn milestones and leaderboard progress. Connect X and Discord to claim referral rewards.
+> Share your invite code. Qualified referrals unlock Burn, Reward Packs, leaderboard progress, and claimable milestone rewards. The Rewards tab should show compact milestone cards with Claim/Locked buttons, progress counts, and reward chips.
 
 ### Inventory
 
@@ -115,6 +115,9 @@ Empty pages should explain what is happening and what the user can do next.
 
 > You do not own any packs yet. Buy a pack from the Store, open boxes, or earn rewards through platform activity.
 
+### Referrals - Reward Milestones
+
+> Milestone rewards appear as compact cards. Show the invite requirement, Claim or Locked button, progress bar with count, and reward chips for Burn, Common, Rare, Epic, Legendary, Mythic, and Top Referrer Badge where applicable.
 ### Referrals - No Referrals
 
 > No referrals yet. Copy your invite link and share it with friends. Qualified referrals will appear here.
@@ -151,8 +154,9 @@ After the user acts, show a clear result.
 ### Referrals
 
 - `Invite link copied.`
-- `Referral qualified. Your progress was updated.`
+- `Referral qualified. Your milestone progress was updated.`
 - `Referral blocked. Duplicate or self-referral detected.`
+- `Reward unlocked. Claim is now available on the referral milestone card.`
 
 ## 5. Tooltip Words
 
