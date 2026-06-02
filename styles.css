@@ -3967,7 +3967,8 @@ h3,
   z-index: 1000;
   left: auto !important;
   right: 24px !important;
-  top: 535px !important;
+  top: 565px !important;
+  bottom: auto !important;
   display: grid;
   grid-template-columns: 62px minmax(0, 1fr);
   gap: 12px;
