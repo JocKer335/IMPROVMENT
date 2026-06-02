@@ -3965,43 +3965,44 @@ h3,
 .campaign-badge {
   position: fixed !important;
   z-index: 1000;
-  left: 22px !important;
-  top: 445px !important;
+  left: auto !important;
+  right: 24px !important;
+  top: 455px !important;
   display: grid;
-  grid-template-columns: 58px minmax(0, 1fr);
-  gap: 11px;
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 12px;
   align-items: center;
-  width: min(318px, calc(100vw - 28px));
-  border: 1px solid rgba(255, 215, 22, 0.68);
-  border-radius: 14px;
-  padding: 10px;
+  width: min(330px, calc(100vw - 28px));
+  border: 1px solid rgba(70, 238, 255, 0.66);
+  border-radius: 16px;
+  padding: 11px;
   background:
-    radial-gradient(circle at 12% 16%, rgba(255, 215, 22, 0.34), transparent 30%),
-    radial-gradient(circle at 86% 88%, rgba(35, 190, 123, 0.2), transparent 34%),
-    linear-gradient(135deg, rgba(34, 20, 14, 0.98), rgba(91, 55, 29, 0.98));
-  color: #fff7ee;
-  box-shadow: 0 18px 38px rgba(20, 10, 4, 0.52), 0 0 34px rgba(255, 215, 22, 0.18), inset 0 1px 0 rgba(255,255,255,0.18);
+    radial-gradient(circle at 14% 8%, rgba(61, 255, 177, 0.34), transparent 34%),
+    radial-gradient(circle at 90% 82%, rgba(52, 115, 255, 0.34), transparent 36%),
+    linear-gradient(145deg, rgba(8, 22, 33, 0.98), rgba(18, 43, 54, 0.98) 50%, rgba(18, 20, 43, 0.98));
+  color: #effcff;
+  box-shadow: 0 20px 44px rgba(4, 13, 24, 0.55), 0 0 30px rgba(70, 238, 255, 0.2), 0 0 18px rgba(61, 255, 177, 0.14), inset 0 1px 0 rgba(255,255,255,0.16);
   isolation: isolate;
 }
 
 .campaign-badge::before {
   content: "";
   position: absolute;
-  inset: 7px;
+  inset: 6px;
   z-index: -1;
   border-radius: 12px;
-  border: 1px solid rgba(255, 247, 238, 0.09);
+  border: 1px solid rgba(201, 252, 255, 0.12);
   pointer-events: none;
 }
 
 .campaign-badge-mark {
   overflow: hidden;
-  width: 58px;
-  height: 70px;
-  border-radius: 10px;
-  border: 2px solid #ffd716;
-  background: #2d1b0e;
-  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.32), 0 0 18px rgba(255, 215, 22, 0.18);
+  width: 62px;
+  height: 76px;
+  border-radius: 12px;
+  border: 2px solid #46eeff;
+  background: #071622;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.36), 0 0 20px rgba(70, 238, 255, 0.28);
 }
 
 .campaign-badge-mark img {
@@ -4018,14 +4019,15 @@ h3,
 }
 
 .campaign-badge-copy strong {
-  color: #ffd716;
+  color: #46eeff;
   font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
+  text-shadow: 0 0 14px rgba(70, 238, 255, 0.34);
 }
 
 .campaign-badge-copy span {
-  color: rgba(255, 247, 238, 0.78);
+  color: rgba(239, 252, 255, 0.82);
   font-size: 11px;
   font-weight: 800;
   line-height: 1.25;
@@ -4035,8 +4037,9 @@ h3,
   width: max-content;
   border-radius: 999px;
   padding: 6px 9px;
-  background: rgba(255, 215, 22, 0.14);
-  color: #fff7ee;
+  border: 1px solid rgba(61, 255, 177, 0.4);
+  background: rgba(61, 255, 177, 0.14);
+  color: #effcff;
   font-size: 12px;
   line-height: 1;
 }
@@ -4046,17 +4049,17 @@ h3,
   min-height: 30px;
   border: 0;
   border-radius: 9px;
-  background: #ffd716;
-  color: #2d1b0e;
+  background: linear-gradient(90deg, #3dffb1, #46eeff);
+  color: #061420;
   font-size: 12px;
   font-weight: 1000;
   text-transform: uppercase;
-  box-shadow: 0 10px 18px rgba(255, 215, 22, 0.18);
+  box-shadow: 0 10px 20px rgba(70, 238, 255, 0.22);
 }
 
 @media (max-width: 640px) {
   .campaign-badge {
-    left: 12px !important;
+    right: 12px !important;
     top: auto !important;
     bottom: 18px !important;
     grid-template-columns: 52px minmax(0, 1fr);
