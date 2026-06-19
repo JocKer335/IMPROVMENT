@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GNF Platform Pages</title>
-    <link rel="stylesheet" href="./styles.css?v=37" />
+    <link rel="stylesheet" href="./styles.css?v=38" />
   </head>
   <body>
     <div class="scene scene-socials" id="scene">
@@ -499,7 +499,48 @@
 
               <div class="info-grid">
                 <article><h2>Description</h2><p>Led by the Alpha Wolf, known to be fierce, loyal, and unbreakable. A master of teamwork and raw strength.</p></article>
-                <article><h2>Benefits</h2><p>Tier 1 - Alpha<br />Tier 2 - Beta<br />Tier 3 - Common<br />Unique Serial</p></article>
+                <article class="reward-pool-card" aria-labelledby="reward-pool-title">
+                  <h2 id="reward-pool-title">Reward Pool</h2>
+                  <div class="reward-pool-list">
+                    <div class="reward-pool-item reward-preview" data-preview="cards" tabindex="0">
+                      <span class="reward-pool-label">Card Pool</span>
+                      <span class="reward-pool-info" aria-hidden="true">?</span>
+                      <div class="reward-tooltip" role="tooltip">
+                        <h3>Card Pool</h3>
+                        <div class="reward-chip-grid">
+                          <span>Inferno</span><span>Nove</span><span>WildForest</span><span>Wisp</span>
+                          <span>Abyss</span><span>Atlantis</span><span>Swamp</span><span>Tsunami</span>
+                          <span>Cyclone</span><span>SandStorm</span><span>Tempest</span><span>Zephyr</span>
+                          <span>Mainframe</span><span>Matrix</span><span>Quantum</span><span>Synthwave</span>
+                          <span>Lich</span><span>Reaper</span><span>Venom</span><span>Wraith</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reward-pool-item" data-preview="characters" tabindex="0">
+                      <span class="reward-pool-label">Character Rarity</span>
+                      <span class="reward-pool-info" aria-hidden="true">?</span>
+                      <div class="reward-tooltip" role="tooltip">
+                        <h3>Character Rarity</h3>
+                        <div class="reward-chip-grid">
+                          <span>Common</span><span>Uncommon</span><span>Rare</span><span>Epic</span><span>Legendary</span><span>Mythic</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reward-pool-item" data-preview="fragments" tabindex="0">
+                      <span class="reward-pool-label">Fragment Tier Rarity</span>
+                      <span class="reward-pool-info" aria-hidden="true">?</span>
+                      <div class="reward-tooltip" role="tooltip">
+                        <h3>Fragment Tier Rarity</h3>
+                        <div class="reward-rarity-list">
+                          <div><strong>Tier 1</strong><span>Highest</span></div>
+                          <div><strong>Tier 2</strong><span>High</span></div>
+                          <div><strong>Tier 3</strong><span>Medium</span></div>
+                          <div><strong>Tier 4</strong><span>Lowest</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
               </div>
 
               <article class="mint-card">
@@ -666,6 +707,7 @@
     <script src="./script.js"></script>
   </body>
 </html>
+
 
 
 
