@@ -29,6 +29,10 @@ const routes = {
     kicker: "GNF Referrals",
     scene: "scene-referrals",
   },
+  faq: {
+    kicker: "GNF FAQ",
+    scene: "scene-faq",
+  },
 };
 
 function setRoute(routeName) {
@@ -129,8 +133,25 @@ document.querySelectorAll("[data-inventory-tab]").forEach((button) => {
       item.classList.toggle("active", item === button);
     });
     document.querySelector("#packsTab").classList.toggle("active", tab === "packs");
-    document.querySelector("#nftsTab").classList.toggle("active", tab === "nfts");
+    document.querySelector("#leadersTab").classList.toggle("active", tab === "leaders");
     document.querySelector("#boostersTab").classList.toggle("active", tab === "boosters");
+    document.querySelector("#historyTab").classList.toggle("active", tab === "history");
+  });
+});
+
+document.querySelectorAll("[data-history-filter]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.historyFilter;
+    document.querySelectorAll("[data-history-filter]").forEach((item) => {
+      item.classList.toggle("active", item === button);
+    });
+    document.querySelectorAll(".history-table tbody tr").forEach((row) => {
+      if (filter === "all") {
+        row.style.display = "";
+      } else {
+        row.style.display = row.dataset.historyType === filter ? "" : "none";
+      }
+    });
   });
 });
 

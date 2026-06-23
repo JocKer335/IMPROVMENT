@@ -20,6 +20,7 @@
             <button type="button" data-route="store">Store</button>
             <button class="active" type="button" data-route="socials">Socials</button>
             <button type="button" data-route="referrals">Referrals</button>
+            <button type="button" data-route="faq">FAQ</button>
           </nav>
         </div>
 
@@ -47,10 +48,10 @@
           </section>
 
           <div class="fragment-strip">
-            <article class="wolf"><strong>10043 Wolf</strong></article>
-            <article class="owl"><strong>10096 Owl</strong></article>
-            <article class="shark"><strong>10041 Shark</strong></article>
-            <article class="snake"><strong>9894 Snake</strong></article>
+            <article class="flare"><span class="frag-count">10000</span><strong>Flare</strong></article>
+            <article class="lore"><span class="frag-count">10000</span><strong>Lore</strong></article>
+            <article class="pulse"><span class="frag-count">10000</span><strong>Pulse</strong></article>
+            <article class="shard"><span class="frag-count">10000</span><strong>Shard</strong></article>
           </div>
 
           <div class="inventory-stats">
@@ -68,7 +69,8 @@
           <section class="inventory-panel">
             <div class="inventory-tabs">
               <button class="active" type="button" data-inventory-tab="packs">Packs</button>
-              <button type="button" data-inventory-tab="nfts">NFTs</button>
+              <button type="button" data-inventory-tab="leaders">Leaders</button>
+              <button type="button" data-inventory-tab="history">History</button>
               <button type="button" data-inventory-tab="boosters">Boosters</button>
             </div>
 
@@ -87,10 +89,10 @@
               </div>
             </div>
 
-            <div class="inventory-tab" id="nftsTab">
+            <div class="inventory-tab" id="leadersTab">
               <div class="inventory-subhead">
                 <div>
-                  <h2>My NFTs</h2>
+                  <h2>Leaders</h2>
                   <p>These are tied to the four Leader paths. You can buy limited packs from the Store or claim them by sacrificing 100 same-type fragments. Once received, they sit unopened in your Inventory until you reveal them. Revealing shows the NFT/serial or pack result.</p>
                 </div>
                 
@@ -101,9 +103,72 @@
                 <button type="button">Unopened</button>
               </div>
               <div class="nft-grid">
-                <article><span>Snake</span><strong>GNF NFT</strong></article>
-                <article><span>Snake</span><strong>GNF NFT</strong></article>
-                <article><span>Owl</span><strong>GNF NFT</strong></article>
+                <article><span>Snake</span><strong>GNF Leader</strong></article>
+                <article><span>Snake</span><strong>GNF Leader</strong></article>
+                <article><span>Owl</span><strong>GNF Leader</strong></article>
+              </div>
+            </div>
+
+            <div class="inventory-tab" id="historyTab">
+              <div class="inventory-subhead">
+                <div>
+                  <h2>History <span class="history-count">6</span></h2>
+                  <div class="history-toolbar">
+                    <button class="history-refresh" type="button" data-toast="History refreshed">
+                      <span>&#8635;</span> Refresh
+                    </button>
+                    <div class="history-filters">
+                      <button class="active" type="button" data-history-filter="all">All</button>
+                      <button type="button" data-history-filter="packs">Packs</button>
+                      <button type="button" data-history-filter="rewards">Rewards</button>
+                      <button type="button" data-history-filter="purchases">Purchases</button>
+                      <button type="button" data-history-filter="social">Social</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="history-table-wrap">
+                <table class="history-table">
+                  <thead>
+                    <tr>
+                      <th>Action</th>
+                      <th>Amount</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-history-type="packs">
+                      <td><strong>Claimed Task Reward</strong></td>
+                      <td>100 Shark NFT Pack</td>
+                      <td>Jun 22, 2026, 4:46 PM</td>
+                    </tr>
+                    <tr data-history-type="rewards">
+                      <td><strong>Claimed Daily Reward</strong></td>
+                      <td>3 Burn + 2 Owl Fragments</td>
+                      <td>Jun 22, 2026, 4:05 PM</td>
+                    </tr>
+                    <tr data-history-type="rewards">
+                      <td><strong>Claimed Daily Reward</strong></td>
+                      <td>2 Burn + 1 Snake Fragments</td>
+                      <td>Jun 21, 2026, 5:45 PM</td>
+                    </tr>
+                    <tr data-history-type="rewards">
+                      <td><strong>Claimed Daily Reward</strong></td>
+                      <td>3 Burn + 1 Owl Fragments</td>
+                      <td>Jun 20, 2026, 8:47 PM</td>
+                    </tr>
+                    <tr data-history-type="social">
+                      <td><strong>Discord Account Connected</strong></td>
+                      <td>-</td>
+                      <td>Jun 20, 2026, 1:24 PM</td>
+                    </tr>
+                    <tr data-history-type="social">
+                      <td><strong>Twitter Account Connected</strong></td>
+                      <td>-</td>
+                      <td>Jun 20, 2026, 1:24 PM</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
 
@@ -117,15 +182,20 @@
               </div>
               <div class="booster-grid">
                 <article>
-                  <div class="booster-icon">24H</div>
-                  <strong>24H Accelerator</strong>
-                  <button type="button" data-toast="24H Accelerator selected">Use</button>
+                  <div class="booster-icon">1H</div>
+                  <strong>1 Hit Booster</strong>
+                  <button type="button" data-toast="1 Hit Booster selected">Use</button>
                 </article>
                 <article>
-                  <div class="booster-icon purple">48H</div>
-                  <strong>48H Accelerator</strong>
+                  <div class="booster-icon purple">2H</div>
+                  <strong>2 Hit Booster</strong>
                   <span>x1</span>
                   <button type="button" data-open-modal="boosterModal">Use</button>
+                </article>
+                <article>
+                  <div class="booster-icon" style="background:#571000;color:#ffbeaa;">3H</div>
+                  <strong>3 Hit Booster</strong>
+                  <button type="button" data-toast="3 Hit Booster selected">Use</button>
                 </article>
               </div>
             </div>
@@ -554,8 +624,23 @@
 
         <section class="page" id="fire-wall">
           <section class="guide-card fire-guide">
-            <strong>Firewall.</strong>
-            <p>This is where under-floor listings are challenged. Frozen NFTs enter a 6 hour timed window: owners can defrost before expiry, or holders vote to save or burn. Every outcome is tracked here, from live votes to final results and your own voting history.</p>
+            <strong>Fire Wall.</strong>
+            <p>GNF is the FIREWALL floor-stabilizer protocol on Metaplex Core, live on Solana mainnet. This is where under-floor listings are challenged. Frozen NFTs enter a 6 hour timed window: owners can defrost before expiry, or holders vote to save or burn. Every outcome is tracked here, from live votes to final results and your own voting history.</p>
+
+            <div class="mechanism-timeline">
+              <h4>How FIREWALL Works (The 9-Step Loop)</h4>
+              <div class="timeline-grid">
+                <div class="t-step"><i>1</i> <strong>Detect</strong> <span>Under-floor listing detected in real time.</span></div>
+                <div class="t-step"><i>2</i> <strong>Freeze</strong> <span>The NFT is frozen automatically.</span></div>
+                <div class="t-step"><i>3</i> <strong>Window</strong> <span>The owner has 6 hours to resolve.</span></div>
+                <div class="t-step"><i>4</i> <strong>Defreeze</strong> <span>Marketplace API delists it; owner keeps asset.</span></div>
+                <div class="t-step"><i>5</i> <strong>Vote</strong> <span>If unresolved, 12-hour holder vote starts.</span></div>
+                <div class="t-step"><i>6</i> <strong>Burn</strong> <span>If burned, original NFT is destroyed.</span></div>
+                <div class="t-step"><i>7</i> <strong>Rebirth</strong> <span>New NFT (same traits) minted to loyal holders.</span></div>
+                <div class="t-step"><i>8</i> <strong>Save</strong> <span>If vote fails, NFT is released normally.</span></div>
+                <div class="t-step"><i>9</i> <strong>Loop</strong> <span>Repeated undercuts re-trigger automatically.</span></div>
+              </div>
+            </div>
           </section>
 
           <div class="pill-tabs firewall-tabs">
@@ -640,9 +725,121 @@
               
               
             </div>
+            <section class="business-model-grid">
+            <article class="pricing-card">
+              <h4>FIREWALL Subscription</h4>
+              <p>For NFT Collections</p>
+              <div class="tiers">
+                <div><span>Starter (1 Collection)</span> <strong>$50/mo</strong></div>
+                <div><span>Pro (2 Collections)</span> <strong>$100/mo</strong></div>
+                <div><span>Advanced (3 Collections)</span> <strong>$150/mo</strong></div>
+                <div><span>Enterprise (Unlimited)</span> <strong>$300/mo</strong></div>
+              </div>
+              <small>NFT Holders get 50% off. Yearly is 20% off.</small>
+            </article>
+
+            <article class="pricing-card tokenomics-card">
+              <h4>GNF Tokenomics</h4>
+              <p>Token is currently NOT live.</p>
+              <div class="tiers">
+                <div><span>Total Supply</span> <strong>1,000,000,000 GNF</strong></div>
+                <div><span>Community / Farmers</span> <strong>30%</strong></div>
+                <div><span>Ecosystem / Treasury</span> <strong>25%</strong></div>
+                <div><span>Buybacks</span> <strong>20% of FIREWALL Profit</strong></div>
+              </div>
+              <small>Token will launch after FIREWALL adoption is proven.</small>
+            </article>
+          </section>
+        </section>
+
+        <section class="page" id="faq">
+          <section class="guide-card dark-guide" style="margin-bottom: 24px;">
+            <strong>Frequently Asked Questions.</strong>
+            <p>Everything you need to know about GNF, FIREWALL, and the ecosystem.</p>
           </section>
 
+          <div class="faq-accordion">
+            <details class="faq-item">
+              <summary>What is GNF?</summary>
+              <div class="faq-content">
+                <p>GNF — Government Not Found — is a Web3 ecosystem built around FIREWALL, an automated on-chain protocol that defends NFT floor prices. Built on Metaplex Core, live on Solana mainnet, pre-launch on the social side.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What is FIREWALL in one sentence?</summary>
+              <div class="faq-content">
+                <p>A collection-level protocol that freezes any NFT listed below the community floor, gives the seller 6 hours to back down, then lets holders vote to burn it — with burned assets re-minted and redistributed to holders who defended the project.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Is GNF live?</summary>
+              <div class="faq-content">
+                <p>The protocol is on Solana mainnet. The social and pack rollout has not started. We're in a pre-launch phase, raising an angel round.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Is the GNF token live?</summary>
+              <div class="faq-content">
+                <p>No. The token is intentionally not active. It will be introduced after FIREWALL proves real adoption. There are no current token promises, no presale, no allocation commitments.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Who decides the floor?</summary>
+              <div class="faq-content">
+                <p>The community. The team has no override.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What stops someone from gaming the vote?</summary>
+              <div class="faq-content">
+                <p>The vote is on-chain, scoped to holders, and time-bound. The protocol has anti-manipulation logic: repeated under-floor relistings re-trigger enforcement automatically.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>How does GNF make money?</summary>
+              <div class="faq-content">
+                <p>FIREWALL is sold as subscription infrastructure. Tiers: Starter $50/mo (1 collection), Pro $100/mo (2), Advanced $150/mo (3), Enterprise $300/mo (unlimited). Yearly is 20% off. NFT holders get 50% off. 20% of revenue funds GNF token buybacks.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>How do I get a GNF NFT?</summary>
+              <div class="faq-content">
+                <p>By participating. You earn leader-specific fragments through social tasks, referrals, and Enlightenment Stories. 100 fragments → 1 Leader pack. Once all 10,000 packs are minted across the community, claiming opens and packs deploy NFTs on-chain. Total supply is capped at 10,000.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Can I buy a pack directly?</summary>
+              <div class="faq-content">
+                <p>Yes — but only a limited share. 2,000 NFTs across the whole collection are available for direct purchase from the Store using burn coins, and 8,000 must be earned (sacrifice-minted from fragments, granted as rewards from tasks/raffles/boxes, or seeded).</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What are the four Leaders?</summary>
+              <div class="faq-content">
+                <p>Owl, Wolf, Shark, Snake. Each Leader has a dedicated pack type and fragment type. Choosing a Leader path is part of the user identity in GNF.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>What happens to a burned NFT?</summary>
+              <div class="faq-content">
+                <p>Its metadata and traits are preserved. A reborn NFT with the same traits is minted and redistributed to holders via a community reward mechanism — never returned to the original under-floor lister.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Can the team override FIREWALL?</summary>
+              <div class="faq-content">
+                <p>No. Once deployed, FIREWALL operates without manual intervention. There are no team backdoors.</p>
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>Is FIREWALL censorship?</summary>
+              <div class="faq-content">
+                <p>No. FIREWALL is not a centralized actor freezing your asset. The rules are encoded into the asset configuration when the collection is enrolled — every holder consents to them by holding the asset. It's the contract of the asset, the same way royalty plugins or transfer restrictions work in any modern NFT standard.</p>
+              </div>
+            </details>
+          </div>
         </section>
+
       </main>
     </div>
 

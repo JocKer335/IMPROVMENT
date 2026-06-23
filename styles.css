@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   color-scheme: dark;
   --cream: #d8cbbb;
   --cream-2: #b9aa98;
@@ -1334,17 +1334,32 @@ p {
 }
 
 .fragment-strip article {
-  min-height: 40px;
+  min-height: 44px;
   border-radius: 999px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 18px;
   color: white;
 }
 
-.fragment-strip .wolf { background: #130052; }
-.fragment-strip .owl { background: #571000; }
-.fragment-strip .shark { background: #021f52; }
-.fragment-strip .snake { background: #005600; }
+.fragment-strip .frag-count {
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.fragment-strip article strong {
+  font-size: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.fragment-strip .flare { background: linear-gradient(135deg, #ff6a00, #ee0979); }
+.fragment-strip .lore { background: linear-gradient(135deg, #e8812b, #a0501a); }
+.fragment-strip .pulse { background: linear-gradient(135deg, #0575e6, #021b79); }
+.fragment-strip .shard { background: linear-gradient(135deg, #6a3093, #3b1470); }
 
 .inventory-stats {
   display: grid;
@@ -1416,7 +1431,7 @@ p {
 
 .inventory-tabs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   border-bottom: 1px solid rgba(80, 80, 80, 0.16);
 }
 
@@ -1581,6 +1596,141 @@ p {
   color: white;
   text-transform: uppercase;
   font-weight: 900;
+}
+
+/* History tab */
+.history-count {
+  display: inline-grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  background: #eee;
+  color: #555;
+  font-size: 12px;
+  font-weight: 900;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.history-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.history-refresh {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  border: 1px solid rgba(80, 80, 80, 0.22);
+  border-radius: 999px;
+  padding: 8px 16px;
+  background: transparent;
+  color: #555;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.history-refresh:hover {
+  background: #f5f5f5;
+  color: #111;
+}
+
+.history-refresh span {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.history-filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.history-filters button {
+  min-height: 32px;
+  border: 1px solid rgba(80, 80, 80, 0.16);
+  border-radius: 999px;
+  padding: 6px 14px;
+  background: transparent;
+  color: #888;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.history-filters button:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.history-filters button.active {
+  background: #236398;
+  color: white;
+  border-color: #236398;
+}
+
+.history-table-wrap {
+  margin-top: 18px;
+  overflow-x: auto;
+  border: 1px solid rgba(80, 80, 80, 0.12);
+  border-radius: 10px;
+}
+
+.history-table {
+  width: 100%;
+  min-width: 580px;
+  border-collapse: collapse;
+  background: white;
+}
+
+.history-table th,
+.history-table td {
+  padding: 14px 18px;
+  text-align: left;
+}
+
+.history-table th {
+  color: #999;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid rgba(80, 80, 80, 0.12);
+  background: #fafafa;
+}
+
+.history-table td {
+  border-bottom: 1px solid rgba(80, 80, 80, 0.08);
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.history-table td strong {
+  color: #111;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.history-table tbody tr:hover td {
+  background: #f7fafd;
+}
+
+.history-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.history-table td:last-child {
+  color: #999;
+  font-size: 13px;
 }
 
 .modal-backdrop.open {
@@ -4264,3 +4414,37 @@ h3,
     transform: translateY(0) translateX(0);
   }
 }
+
+/* FAQ Accordion */
+.faq-accordion { display: flex; flex-direction: column; gap: 12px; }
+.faq-item { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 16px; transition: background 0.2s; }
+.faq-item:hover { background: rgba(255, 255, 255, 0.06); }
+.faq-item summary { font-weight: 600; cursor: pointer; color: #fff; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 1.2rem; color: #00dca6; }
+.faq-item[open] summary::after { content: '-'; }
+.faq-content { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, 0.1); color: #a1a1aa; line-height: 1.5; font-size: 0.95rem; }
+
+
+/* Timeline */
+.mechanism-timeline { margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.mechanism-timeline h4 { font-size: 1rem; color: #fff; margin-bottom: 16px; font-weight: 600; }
+.timeline-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.t-step { background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.05); padding: 12px; border-radius: 6px; display: flex; flex-direction: column; gap: 4px; }
+.t-step i { font-style: normal; display: inline-flex; width: 24px; height: 24px; background: #00dca6; color: #000; border-radius: 50%; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; margin-bottom: 4px; }
+.t-step strong { color: #fff; font-size: 0.95rem; }
+.t-step span { color: #a1a1aa; font-size: 0.85rem; line-height: 1.4; }
+
+
+/* Pricing & Tokenomics */
+.business-model-grid { margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.pricing-card { background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 20px; }
+.pricing-card h4 { font-size: 1.1rem; color: #fff; margin-bottom: 4px; }
+.pricing-card > p { color: #00dca6; font-size: 0.85rem; margin-bottom: 16px; font-weight: 500; }
+.tiers { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.tiers div { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px; }
+.tiers div span { color: #a1a1aa; font-size: 0.9rem; }
+.tiers div strong { color: #fff; font-size: 0.95rem; }
+.pricing-card small { display: block; color: rgba(255,255,255,0.4); font-size: 0.75rem; text-align: center; }
+.tokenomics-card > p { color: #ffbeaa; }
+
